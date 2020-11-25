@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="page-inner">
+	<!-- Page Url  -->
+    <div class="page-header">
+        <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a href="#">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="fas fa-angle-right"></i>
+            </li>
+            <li class="nav-item">
+                Trang
+            </li>
+            <li class="separator">
+                <i class="fas fa-angle-right"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">@ViewData["Page.Target"]</a> <!-- Page Target Small -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page Content  -->
+	<div class="page-category">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-xl-3">
+                        <!-- Avatar  -->
+                        <div class="avatar avatar-xxl profile-avt">
+                            <img src="@ViewData["User.Avatar"]" alt="user avatar" class="avatar-img rounded">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xl-5 profile-info">
+                        <!-- Name  -->
+                        <h1 class="d-inline-block font-weight-normal">@ViewData["User.Username"]</h1>
+                        <!-- Bio  -->
+                        <p>@ViewData["User.Bio"]</p>
+                        <div class="row my-4">
+                            <div class="col-sm-6">
+                                <!-- Email  -->
+                                <a href=""><h5 class="text-h-primary mb-3">@ViewData["User.Email"]</h5></a>
+                                <!-- Job  -->
+                                <h5 class="mb-3">@ViewData["User.Job"]</h5>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Country  -->
+                                <h5 class="mb-3">@ViewData["User.Country"]</h5>
+                                <!-- Role  -->
+                                <h5 class="mb-3">@ViewData["User.Role"]</h5>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary"><b>Nhắn tin</b></button>&emsp;&emsp;&emsp;
+                        <button class="btn btn-default"><b>Chỉnh sửa</b></button>
+                    </div>
+
+                    <!-- Team  -->
+                    <div class="col-md-12 col-xl-4">
+                        <h6 class="mb-3 text-uppercase text-body f-12">Nhóm</h6>
+                        <div class="media mb-5">
+                            <div class="avatar avatar-online">
+                                <!-- Team Avatar  -->
+                                <img src="@ViewData["Team.Avatar"]" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                            <div class="media-body ml-3 align-self-center">
+                                <!-- Team Name  -->
+                                <p class="mb-0 text-truncate">@ViewData["Team.Name"]</p>
+                            </div>
+                        </div>
+
+                        <!-- Team members  -->
+                        <h6 class="mb-3 text-uppercase text-body f-12">thành viên nhóm</h6>
+                        <div class="avatar-group">
+                            <div class="avatar">
+                                <img src="@ViewData["User.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
+                            </div>
+                            <div class="avatar">
+                                <img src="@ViewData["Team.UserID2.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
+                            </div>
+                            <div class="avatar">
+                                <img src="@ViewData["Team.UserID3.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
+                            </div>
+                            <div class="avatar">
+                                <span class="avatar-title rounded-circle border border-white">CF</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>

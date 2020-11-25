@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!-- Page Header  -->
+<div class="panel-header bg-primary-gradient">
+    <div class="page-inner py-5">
+        <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+            <div class="form-group" style="border: 5px solid white;">
+                <button class="btn btn-default" style="border-right: 5px solid white;">
+                    <span class="btn-label">
+                        <i class="fa fa-plus"></i>
+                    </span>
+                    Thêm
+                </button>
+                <button class="btn btn-success">
+                    <span class="btn-label">
+                        <i class="fas fa-bookmark"></i>
+                    </span>
+                    Đã tạo
+                </button>
+                <button class="btn btn-secondary">
+                    <span class="btn-label">
+                        <i class="fas fa-cube"></i>
+                    </span>
+                    Đã học
+                </button>
+                <button class="btn btn-warning">
+                    <span class="btn-label">
+                        <i class="fa fa-folder"></i>
+                    </span>
+                    Thư mục
+                </button>
+                <button class="btn btn-danger">
+                    <span class="btn-label">
+                        <i class="fa fa-users"></i>
+                    </span>
+                    Lớp học
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page Content  -->
+<div class="page-inner">
+    <div class="page-category">
+        <!-- Recent  -->
+        <div class="col-md-12">
+            <h3><b>Gần nhất</b><hr style="float: right; width: 60vw; border: none; border-bottom: 1px solid black;"/></h3>
+            <!-- Set 1 -->
+            <div class="card _cardHoverBottomLine card-stats card-round">
+                <div class="card-body">
+                    <div class="card-category">
+                        @ViewData["Set.ID1.Count"] thuật ngữ
+                    </div>
+                    <a href="#" class="card-title text-uppercase" style="text-decoration: none;">
+                        <b>@ViewData["Set.ID1.Name"]</b>
+                    </a>
+                    &emsp;
+                    <i class="card-category far fa-image"></i>
+                    <i class="card-category fas fa-lock"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- This week  -->
+        <div class="col-md-12">
+            <h3><b>Tuần này</b><hr style="float: right; width: 60vw; border: none; border-bottom: 1px solid black;"/></h3>
+            <!-- Set 2 -->
+            <div class="card _cardHoverBottomLine card-stats card-round">
+                <div class="card-body">
+                    <div class="card-category">
+                        @ViewData["Set.ID2.Count"] thuật ngữ
+                    </div>
+                    <a href="#" class="card-title text-uppercase" style="text-decoration: none;">
+                        <b>@ViewData["Set.ID2.Name"]</b>
+                    </a>
+                    &emsp;
+                    <i class="card-category far fa-image"></i>
+                    <i class="card-category fas fa-lock"></i>
+                </div>
+            </div>
+            
+            <!-- Set 3 -->
+            <div class="card _cardHoverBottomLine card-stats card-round">
+                <div class="card-body">
+                    <div class="card-category">
+                        @ViewData["Set.ID3.Count"] thuật ngữ
+                    </div>
+                    <a href="#" class="card-title text-uppercase" style="text-decoration: none;">
+                        <b>@ViewData["Set.ID3.Name"]</b>
+                    </a>
+                    &emsp;
+                    <i class="card-category far fa-image"></i>
+                    <i class="card-category fas fa-lock"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Last week  -->
+        <div class="col-md-12">
+            <h3><b>Tuần trước</b><hr style="float: right; width: 60vw; border: none; border-bottom: 1px solid black;"/></h3>
+            <!-- Set 4 -->
+            <div class="card _cardHoverBottomLine card-stats card-round">
+                <div class="card-body">
+                    <div class="card-category">
+                        @ViewData["Set.ID4.Count"] thuật ngữ
+                    </div>
+                    <a href="#" class="card-title text-uppercase" style="text-decoration: none;">
+                        <b>@ViewData["Set.ID4.Name"]</b>
+                    </a>
+                    &emsp;
+                    <i class="card-category far fa-image"></i>
+                    <i class="card-category fas fa-lock"></i>
+                </div>
+            </div>
+            
+            <!-- Set 5 -->
+            <div class="card _cardHoverBottomLine card-stats card-round">
+                <div class="card-body">
+                    <div class="card-category">
+                        @ViewData["Set.ID4.Count"] thuật ngữ
+                    </div>
+                    <a href="#" class="card-title text-uppercase" style="text-decoration: none;">
+                        <b>@ViewData["Set.ID4.Name"]</b>
+                    </a>
+                    &emsp;
+                    <i class="card-category far fa-image"></i>
+                    <i class="card-category fas fa-lock"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,103 @@
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/appsettings.Development.json
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/appsettings.json
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.exe
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.deps.json
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.runtimeconfig.json
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.runtimeconfig.dev.json
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.dll
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/ref/FlashCard.dll
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.pdb
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.Views.dll
+D:/Microsoft Visual Studio/Projects/FlashCard/bin/Debug/net5.0/FlashCard.Views.pdb
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.csprojAssemblyReference.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.GeneratedMSBuildEditorConfig.editorconfig
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.AssemblyInfoInputs.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.AssemblyInfo.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.csproj.CoreCompileInputs.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.MvcApplicationPartsAssemblyInfo.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.RazorAssemblyInfo.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.RazorAssemblyInfo.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/staticwebassets/FlashCard.StaticWebAssets.Manifest.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/staticwebassets/FlashCard.StaticWebAssets.xml
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/scopedcss/bundle/FlashCard.styles.css
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.TagHelpers.input.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.TagHelpers.output.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.RazorCoreGenerate.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/Error.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.RazorTargetAssemblyInfo.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.RazorTargetAssemblyInfo.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.Views.pdb
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.dll
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/ref/FlashCard.dll
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.pdb
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.genruntimeconfig.cache
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/FlashCard.csproj.CopyComplete
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Intro/Index.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Intro/About.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/FlashCards/Index.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/Error/index.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/AddClass.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/Classes.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/Edit.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/Folders.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/Index.cshtml.g.cs
+D:/Microsoft Visual Studio/Projects/FlashCard/obj/Debug/net5.0/Razor/Views/User/Sets.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/appsettings.Development.json
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/appsettings.json
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.deps.json
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.runtimeconfig.json
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.runtimeconfig.dev.json
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/ref/FlashCard.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.Views.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/FlashCard.Views.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Application.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Domain.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Infrastructure.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Domain.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Application.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/bin/Debug/net5.0/Infrastructure.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.csprojAssemblyReference.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.AssemblyInfoInputs.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.AssemblyInfo.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.csproj.CoreCompileInputs.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.MvcApplicationPartsAssemblyInfo.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.RazorAssemblyInfo.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.RazorAssemblyInfo.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/staticwebassets/FlashCard.StaticWebAssets.Manifest.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/staticwebassets/FlashCard.StaticWebAssets.xml
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/scopedcss/bundle/FlashCard.styles.css
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.TagHelpers.input.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.TagHelpers.output.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.RazorCoreGenerate.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Error/index.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/FlashCards/Index.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Intro/About.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Intro/Index.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/AddClass.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/Classes.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/Edit.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/Folders.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/Index.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/User/Sets.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.RazorTargetAssemblyInfo.cache
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.RazorTargetAssemblyInfo.cs
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.Views.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.csproj.CopyComplete
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/ref/FlashCard.dll
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.pdb
+/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/Debug/net5.0/FlashCard.genruntimeconfig.cache
