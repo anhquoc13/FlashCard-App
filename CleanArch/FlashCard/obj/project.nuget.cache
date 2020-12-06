@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DRkN0m4kuyaO9ZfziBzQX3XGRtBfCWe4Y7MPvQu9wMJMX3MB1pToCqsk5tNoSNqUhM4OI92xfhEh8uvOIHqP5Q==",
+  "dgSpecHash": "nSjhaLUTU0J+LpKreBYFY/K6JQRQwuqRjan38mhLUrkg/tXZr/rmVP412o5/26G97B0PadQaREf0VMZVysVmIQ==",
   "success": true,
-  "projectFilePath": "/Users/danganhquoc/Desktop/CleanArch/FlashCard/FlashCard.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\FlashCard\\FlashCard.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

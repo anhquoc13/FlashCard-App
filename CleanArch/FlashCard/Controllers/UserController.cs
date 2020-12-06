@@ -11,19 +11,18 @@ namespace LearningWeb.Controllers
         public IActionResult Index()
         {
             ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
+            ViewData["User.Tagname"]="tuanvu";
+            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
             ViewData["User.Country"]="Việt Nam";
-            ViewData["User.Job"]="Coder";
+            ViewData["User.Job"]="Lập trình viên";
             ViewData["User.Bio"]="bla bla bla ...";
-            
-            ViewData["Team.Name"]="PTTKTeam, Inc";
-            ViewData["Team.Avatar"]="resources/images/team/team_1.jpeg";
-            ViewData["Team.UserID2.Avatar"]="resources/images/user/avt_2.jpg";
-            ViewData["Team.UserID3.Avatar"]="resources/images/user/avt_3.jpg";
 
-            ViewData["Page.Title"]="Tuấn Vũ";
+            ViewData["User.SetCount"]="117";
+            ViewData["User.FolderCount"]="57";
+            ViewData["User.ClassCount"]="7";
+
+            ViewData["Page.Title"]=ViewData["User.Username"];
             ViewData["Page.Target"]="Hồ sơ";
             return View();
         }
@@ -40,9 +39,7 @@ namespace LearningWeb.Controllers
             ViewData["User.Job"]="Coder";
             ViewData["User.Bio"]="bla bla bla ...";
 
-            ViewData["Team.Name"]="PTTKTeam, Inc";
-
-            ViewData["Page.Title"]="Tuấn Vũ";
+            ViewData["Page.Title"]=ViewData["User.Username"];
             ViewData["Page.Target"]="Hồ sơ";
             return View();
         }
@@ -50,9 +47,16 @@ namespace LearningWeb.Controllers
         public IActionResult Sets()
         {
             ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
+
+            ViewData["Owner.Username"]="Tuấn Vũ";
+            ViewData["Owner.Tagname"]="tuanvu";
+            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
+            ViewData["Owner.SetCount"]="117";
+            ViewData["Owner.FolderCount"]="57";
+            ViewData["Owner.ClassCount"]="7";
 
             ViewData["Set.ID1.Name"]="Tiếng anh nhập môn";
             ViewData["Set.ID1.Count"]="2";
@@ -65,7 +69,7 @@ namespace LearningWeb.Controllers
             ViewData["Set.ID5.Name"]="Thư viện học thuật";
             ViewData["Set.ID5.Count"]="102";
 
-            ViewData["Page.Title"]="Tuấn Vũ";
+            ViewData["Page.Title"]=ViewData["User.Username"];
             ViewData["Page.Target"]="Học phần";
             return View();
         }
@@ -73,16 +77,23 @@ namespace LearningWeb.Controllers
         public IActionResult Folders()
         {
             ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
+
+            ViewData["Owner.Username"]="Tuấn Vũ";
+            ViewData["Owner.Tagname"]="tuanvu";
+            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
+            ViewData["Owner.SetCount"]="117";
+            ViewData["Owner.FolderCount"]="57";
+            ViewData["Owner.ClassCount"]="7";
 
             ViewData["Folder.ID1.Name"]="Tiếng trung cơ bản";
             ViewData["Folder.ID1.Count"]="2";
             ViewData["Folder.ID2.Name"]="Tiếng anh viết và đọc";
             ViewData["Folder.ID2.Count"]="11";
 
-            ViewData["Page.Title"]="Tuấn Vũ";
+            ViewData["Page.Title"]=ViewData["User.Username"];
             ViewData["Page.Target"]="Thư mục";
             return View();
         }
@@ -90,9 +101,16 @@ namespace LearningWeb.Controllers
         public IActionResult Classes()
         {
             ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
+
+            ViewData["Owner.Username"]="Tuấn Vũ";
+            ViewData["Owner.Tagname"]="tuanvu";
+            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
+            ViewData["Owner.SetCount"]="117";
+            ViewData["Owner.FolderCount"]="57";
+            ViewData["Owner.ClassCount"]="7";
 
             ViewData["Class.ID1.Name"]="Lớp tiếng trung cơ bản";
             ViewData["Class.ID1.setID.Count"]="2";
@@ -107,8 +125,19 @@ namespace LearningWeb.Controllers
             ViewData["Class.ID3.userID.Count"]="110";
             ViewData["Class.ID3.School"]="SGUL • Ho Chi Minh City, Viet Nam";
 
-            ViewData["Page.Title"]="Tuấn Vũ";
+            ViewData["Page.Title"]=ViewData["User.Username"];
             ViewData["Page.Target"]="Lớp";
+            return View();
+        }
+
+        public IActionResult AddSet()
+        {
+            ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
+            ViewData["User.Email"]="abc@gmail.com";
+
+            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Target"]="Tạo học phần";
             return View();
         }
 
@@ -117,10 +146,9 @@ namespace LearningWeb.Controllers
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
 
-            ViewData["Page.Title"]="Tạo lớp";
-            ViewData["Page.Target"]=ViewData["Page.Title"];
+            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Target"]="Tạo học phần";
             return View();
         }
     }

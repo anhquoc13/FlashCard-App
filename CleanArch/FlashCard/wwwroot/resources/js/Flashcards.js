@@ -28,3 +28,21 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
   document.getElementsByClassName("pagination")[0].innerText = slideIndex + ' / ' + x.length;
 }
+
+function showActionBtn(n) {
+  for (i = 1; i <= n; i++) {
+    var x = document.getElementById("btn-action" + i);
+    if (window.getComputedStyle(x, null).display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+}
+
+/*** Tooltips ***/
+$(document).ready(function(){
+  $('[rel="tooltip"]').tooltip({trigger: "hover"});
+});
+
+/*** Data Tables ***/

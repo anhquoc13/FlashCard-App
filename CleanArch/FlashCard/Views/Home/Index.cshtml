@@ -32,119 +32,72 @@
         <!-- Recent -->
         <div class="col-md-12">
             <h3>
-                <b>Gần đây</b>
-                <a href="" class="float-right text-decoration-none">
+                <b>Tiến trình</b>
+                <a href="#" class="float-right text-decoration-none">
                     Xem tất cả
                     <i class="fas fa-angle-right"></i>
                 </a>
-            </h3>
+            </h3><br>
 
-            <!-- Sets List -->
-            <div id="cards_landscape_wrap-2">
-                <div class="row">
-                    <!-- Sets 1 -->
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="">
-                            <div class="card-flyer">
-                                <div class="text-box">
-                                    <div class="image-box">
-                                        <img src="@ViewData["Set.ID1.Image"]" alt="" />
-                                    </div>
-                                    <div class="text-container">
-                                        <h6>@ViewData["Set.ID1.Name"]</h6>
-                                        <p>
-                                            @ViewData["Set.ID1.Count"] thuật ngữ
-                                            <i class="fas fa-lock"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+            <!-- Stats List -->
+            <div class="bg_statsMenu">
+                <!-- NEW -->
+                <a href="" class="statsMenu statsMenu_add" data-toggle="modal" data-target="#createItemModal">
+                    <div class="statsMenu_overlay"></div>
+                    <div class="statsMenu_circle">
+                        <img src="resources\images\svg_icons\add.svg" class="statsMenu_svg-icons">
                     </div>
+                    <p>Thêm mới</p>
+                </a>
 
-                    <!-- Sets 2 -->
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="">
-                            <div class="card-flyer">
-                                <div class="text-box">
-                                    <div class="image-box">
-                                        <img src="@ViewData["Set.ID2.Image"]" alt="" />
-                                    </div>
-                                    <div class="text-container">                                    
-                                        <h6>@ViewData["Set.ID2.Name"]</h6>
-                                        <p>
-                                            @ViewData["Set.ID2.Count"] thuật ngữ
-                                            <i class="fas fa-lock"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                <!-- Sets -->
+                <a href="#" class="statsMenu statsMenu_Mark statsMenu_sets">
+                    <div class="statsMenu_overlay"></div>
+                    <div class="statsMenu_circle">
+                        <img src="resources\images\svg_icons\card2.svg" class="statsMenu_svg-icons">
                     </div>
+                    <p>@ViewData["User.SetCount"] Học phần</p>
+                </a>
 
-                    <!-- Sets 3 -->
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <a href="">
-                            <div class="card-flyer">
-                                <div class="text-box">
-                                    <div class="image-box">
-                                        <img src="@ViewData["Set.ID3.Image"]" alt="" />
-                                    </div>
-                                    <div class="text-container">
-                                        <h6>@ViewData["Set.ID3.Name"]</h6>
-                                        <p>
-                                            @ViewData["Set.ID3.Count"] thuật ngữ
-                                            <i class="fas fa-lock"></i>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                <!-- Folders -->
+                <a href="#" class="statsMenu statsMenu_Mark statsMenu_folders">
+                    <div class="statsMenu_overlay"></div>
+                    <div class="statsMenu_circle">
+                        <img src="resources\images\svg_icons\folder.svg" class="statsMenu_svg-icons">
                     </div>
+                    <p>@ViewData["User.FolderCount"] Thư mục</p>
+                </a>
 
-                    <!-- Sets 4 -->
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <a href="">
-                                <div class="card-flyer">
-                                    <div class="text-box">
-                                        <div class="image-box">
-                                            <img src="@ViewData["Set.ID4.Image"]" alt="" />
-                                        </div>
-                                        <div class="text-container">
-                                            <h6>@ViewData["Set.ID4.Name"]</h6>
-                                        <p>
-                                            @ViewData["Set.ID4.Count"] thuật ngữ
-                                            <i class="fas fa-lock"></i>
-                                        </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
+                <!-- Classes -->
+                <a href="#" class="statsMenu statsMenu_Mark statsMenu_classes">
+                    <div class="statsMenu_overlay"></div>
+                    <div class="statsMenu_circle">     
+                        <img src="resources\images\svg_icons\group.svg" class="statsMenu_svg-icons">
                     </div>
-                </div>
+                    <p>@ViewData["User.ClassCount"] Lớp học</p>
+                </a>
+
             </div>
-
-            <br>
-
-            <!-- Recommend -->
-            <div class="col-md-12">
-                <h3><b>Khuyến nghị</b></h3><br>
-                <div class="card full-height">
-                    <div class="card-body">
-                        <div class="media position-relative">
-                            <img src="~/resources/images/recom.png" class="mr-3" alt="...">
-                            <div class="media-body">
-                                <h5 class="mt-0"><b>Thêm khóa học của bạn để nhận đề xuất</b></h5>
-                                <p>Sau khi bạn cho chúng tôi biết thêm về nội dung đang học, chúng tôi sẽ có thể đề xuất học phần mà bạn cùng lớp đã học.</p>
-                                <button class="btn btn-secondary">Thêm khóa học</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
+        
+        <br>
+
+        <!-- Recommend -->
+        <div class="col-md-12">
+            <h3><b>Khuyến nghị</b></h3><br>
+            <div class="card full-height">
+                <div class="card-body">
+                    <div class="media position-relative">
+                        <img src="~/resources/images/recom.png" class="mr-3" alt="...">
+                        <div class="media-body">
+                            <h5 class="mt-0"><b>Thêm khóa học của bạn để nhận đề xuất</b></h5>
+                            <p>Sau khi bạn cho chúng tôi biết thêm về nội dung đang học, chúng tôi sẽ có thể đề xuất học phần mà bạn cùng lớp đã học.</p>
+                            <button class="btn btn-secondary">Thêm khóa học</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

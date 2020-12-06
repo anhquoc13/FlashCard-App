@@ -10,3 +10,15 @@
 /Users/danganhquoc/Desktop/CleanArch/Domain/obj/Debug/net5.0/Domain.dll
 /Users/danganhquoc/Desktop/CleanArch/Domain/obj/Debug/net5.0/ref/Domain.dll
 /Users/danganhquoc/Desktop/CleanArch/Domain/obj/Debug/net5.0/Domain.pdb
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.dll
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.pdb
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\bin\Debug\net5.0\Domain.deps.json
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\bin\Debug\net5.0\Domain.dll
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\bin\Debug\net5.0\ref\Domain.dll
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\bin\Debug\net5.0\Domain.pdb
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Project\FlashCard-App\CleanArch\Domain\obj\Debug\net5.0\ref\Domain.dll
