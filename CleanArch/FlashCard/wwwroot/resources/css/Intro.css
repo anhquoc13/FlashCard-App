@@ -203,7 +203,7 @@ body {
   }
 }
 
-a.main-button-slider {
+button.main-button-slider {
   font-size: 20px;
   border-radius: 5px;
   padding: 24px 40px;
@@ -214,49 +214,6 @@ a.main-button-slider {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-a.sub-button-slider:hover {
-  background-color: #ce4646;
-}
-
-a.main-button {
-  font-size: 13px;
-  border-radius: 20px;
-  padding: 12px 20px;
-  background-color: #00b4c6;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.25px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a.main-button:hover {
-  background-color: #0088e8;
-}
-
-button.main-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  background-color: #f55858;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.25px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-button.main-button:hover {
-  background-color: #0088e8;
 }
 
 .section-heading h2 {

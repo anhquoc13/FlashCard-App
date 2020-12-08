@@ -1,14 +1,10 @@
-﻿@{
-    Layout = "_Layout";
-}
-
-<div class="page-inner">
+﻿<div class="page-inner">
     <!-- Page Url  -->
     <div class="page-header"> 
         <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a asp-controller="Home" asp-action="Index">
                     <i class="fas fa-home"></i>
                 </a>
             </li>
@@ -42,7 +38,7 @@
             <!-- Stats List -->
             <div class="bg_statsMenu">
                 <!-- NEW -->
-                <a href="" class="statsMenu statsMenu_add" data-toggle="modal" data-target="#createItemModal">
+                <a class="statsMenu statsMenu_add" data-toggle="modal" data-target="#createItemModal">
                     <div class="statsMenu_overlay"></div>
                     <div class="statsMenu_circle">
                         <img src="resources\images\svg_icons\add.svg" class="statsMenu_svg-icons">
@@ -51,7 +47,7 @@
                 </a>
 
                 <!-- Sets -->
-                <a href="#" class="statsMenu statsMenu_Mark statsMenu_sets">
+                <a asp-controller="User" asp-action="Sets" class="statsMenu statsMenu_Mark statsMenu_sets">
                     <div class="statsMenu_overlay"></div>
                     <div class="statsMenu_circle">
                         <img src="resources\images\svg_icons\card2.svg" class="statsMenu_svg-icons">
@@ -60,7 +56,7 @@
                 </a>
 
                 <!-- Folders -->
-                <a href="#" class="statsMenu statsMenu_Mark statsMenu_folders">
+                <a asp-controller="User" asp-action="Folders" class="statsMenu statsMenu_Mark statsMenu_folders">
                     <div class="statsMenu_overlay"></div>
                     <div class="statsMenu_circle">
                         <img src="resources\images\svg_icons\folder.svg" class="statsMenu_svg-icons">
@@ -69,7 +65,7 @@
                 </a>
 
                 <!-- Classes -->
-                <a href="#" class="statsMenu statsMenu_Mark statsMenu_classes">
+                <a asp-controller="User" asp-action="Classes" class="statsMenu statsMenu_Mark statsMenu_classes">
                     <div class="statsMenu_overlay"></div>
                     <div class="statsMenu_circle">     
                         <img src="resources\images\svg_icons\group.svg" class="statsMenu_svg-icons">
@@ -85,14 +81,14 @@
         <!-- Recommend -->
         <div class="col-md-12">
             <h3><b>Khuyến nghị</b></h3><br>
-            <div class="card full-height">
+            <div class="card">
                 <div class="card-body">
                     <div class="media position-relative">
                         <img src="~/resources/images/recom.png" class="mr-3" alt="...">
-                        <div class="media-body">
-                            <h5 class="mt-0"><b>Thêm khóa học của bạn để nhận đề xuất</b></h5>
+                        <div>
+                            <h5 class="mt-0"><b>Thêm Lớp học của bạn để học tập cùng mọi người</b></h5>
                             <p>Sau khi bạn cho chúng tôi biết thêm về nội dung đang học, chúng tôi sẽ có thể đề xuất học phần mà bạn cùng lớp đã học.</p>
-                            <button class="btn btn-secondary">Thêm khóa học</button>
+                            <a asp-controller="User" asp-action="AddClass" class="btn btn-secondary">Thêm lớp học</a>
                         </div>
                     </div>
                 </div>

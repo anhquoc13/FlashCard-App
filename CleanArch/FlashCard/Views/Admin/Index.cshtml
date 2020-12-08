@@ -1,6 +1,4 @@
-@{
-    Layout = "_Layout";
-}
+
 
 <div class="page-inner">
     <!-- Page Url  -->
@@ -8,7 +6,7 @@
         <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a asp-controller="Home" asp-action="Index">
                     <i class="fas fa-home"></i>
                 </a>
             </li>

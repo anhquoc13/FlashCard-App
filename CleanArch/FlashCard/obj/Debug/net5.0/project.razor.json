@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\FlashCard.csproj",
+  "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\FlashCard.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15603,108 +15603,193 @@
   "RootNamespace": "FlashCard",
   "Documents": [
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Error\\index.cshtml",
-      "TargetPath": "Views\\Error\\index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Folders\\Index.cshtml",
+      "TargetPath": "Views\\Folders\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_addSetToFolderModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_addSetToFolderModal.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_removeAccountModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_removeAccountModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\Sets.cshtml",
-      "TargetPath": "Views\\User\\Sets.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_addMemberModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_addMemberModal.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\Index.cshtml",
-      "TargetPath": "Views\\User\\Index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_shareSetModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_shareSetModal.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Intro\\Index.cshtml",
-      "TargetPath": "Views\\Intro\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Sets\\Index.cshtml",
-      "TargetPath": "Views\\Sets\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Admin\\Index.cshtml",
-      "TargetPath": "Views\\Admin\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\AddClass.cshtml",
-      "TargetPath": "Views\\User\\AddClass.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\AddSet.cshtml",
-      "TargetPath": "Views\\User\\AddSet.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Intro\\About.cshtml",
-      "TargetPath": "Views\\Intro\\About.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\Folders.cshtml",
-      "TargetPath": "Views\\User\\Folders.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Classes\\Index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Classes\\Index.cshtml",
       "TargetPath": "Views\\Classes\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\Classes.cshtml",
-      "TargetPath": "Views\\User\\Classes.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\Index.cshtml",
+      "TargetPath": "Views\\User\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Shared\\_Modal.cshtml",
-      "TargetPath": "Views\\Shared\\_Modal.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\AddSet.cshtml",
+      "TargetPath": "Views\\User\\AddSet.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\User\\Edit.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\Folders.cshtml",
+      "TargetPath": "Views\\User\\Folders.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\Edit.cshtml",
       "TargetPath": "Views\\User\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_createItemModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_createItemModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\Sets.cshtml",
+      "TargetPath": "Views\\User\\Sets.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_createFolderModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_createFolderModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Sets\\Index.cshtml",
+      "TargetPath": "Views\\Sets\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_addSetToFoldersAndCLassesModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_addSetToFoldersAndCLassesModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Intro\\About.cshtml",
+      "TargetPath": "Views\\Intro\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Error\\index.cshtml",
+      "TargetPath": "Views\\Error\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_createClassModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_createClassModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\_ownerLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_ownerLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\AddClass.cshtml",
+      "TargetPath": "Views\\User\\AddClass.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_signupModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_signupModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\User\\Classes.cshtml",
+      "TargetPath": "Views\\User\\Classes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_removeClassModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_removeClassModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Microsoft Visual Studio\\Projects\\FlashCard\\Views\\Folders\\Index.cshtml",
-      "TargetPath": "Views\\Folders\\Index.cshtml",
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_removeAllMemberModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_removeAllMemberModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_changePassModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_changePassModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_loginModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_loginModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_learnFolderModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_learnFolderModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_addFolderToClassModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_addFolderToClassModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_infoSetModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_infoSetModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Shared\\Modal\\_reportClassModal.cshtml",
+      "TargetPath": "Views\\Shared\\Modal\\_reportClassModal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\Views\\Intro\\Index.cshtml",
+      "TargetPath": "Views\\Intro\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Application\\Application.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Application\\Application.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Application\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj"
+              "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj"
               }
             }
           }
@@ -62,17 +62,17 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\Project\\FlashCard-App\\CleanArch\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

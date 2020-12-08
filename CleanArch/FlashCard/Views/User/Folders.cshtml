@@ -1,49 +1,7 @@
-﻿@{
-    Layout = "_Layout";
-}
-
-<!-- Page Header  -->
+﻿<!-- Page Header  -->
 <div class="panel-header bg-white">
     <div class="page-inner">
-        <div class="owner-container">
-            <!-- Owner Avatar -->
-            <div class="owner-img-container">
-                <img src="@ViewData["Owner.Avatar"]" alt="">
-            </div>
-            
-            <div class="owner-content">
-                <!-- Owner Name -->
-                <div class="owner-head">
-                    <h3>@ViewData["Owner.Username"]</h3>
-                    <a href=""><h5>@Html.Raw("@")@ViewData["Owner.Tagname"]</h5></a>
-                </div>
-                
-                <!-- Owner Data -->
-                <div class="owner-data">
-                    <button class="btn btn-secondary mr-1">
-                        <span class="btn-label">
-                            <i class="fas fa-clone"></i>
-                        </span>&ensp;
-                        Học phần (@ViewData["Owner.SetCount"])
-                    </button>
-
-                    <button class="btn btn-success mr-1">
-                        <span class="btn-label">
-                            <i class="fas fa-folder"></i>
-                        </span>&ensp;
-                        Thự mục (@ViewData["Owner.FolderCount"])
-                    </button>
-
-                    <button class="btn btn-info">
-                        <span class="btn-label">
-                            <i class="fas fa-user"></i>
-                        </span>&ensp;
-                        Lớp học (@ViewData["Owner.ClassCount"])
-                    </button>
-                </div>
-            </div>
-            
-        </div>
+        @await Html.PartialAsync("~/Views/Shared/_ownerLayout.cshtml")
     </div>
 </div>
 

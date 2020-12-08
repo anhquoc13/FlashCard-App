@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\FlashCard\\FlashCard.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\FlashCard.csproj",
       "projectName": "FlashCard",
-      "projectPath": "C:\\Users\\DELL\\Desktop\\FlashCard\\FlashCard.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Desktop\\FlashCard\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\FlashCard.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

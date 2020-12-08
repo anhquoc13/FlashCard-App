@@ -410,6 +410,10 @@
   cursor: pointer;
 }
 
+.profile-edit-btn:link{
+  text-decoration: none;
+}
+
 .profile-head .nav-tabs{
   margin-bottom:5%;
 }
@@ -461,6 +465,7 @@
   }
 
   .statsMenu_add {
+    cursor: pointer;
 	--bg-color: #ff6169;
 	--bg-color-light: #fb969b;
 	--text-color-hover: white;

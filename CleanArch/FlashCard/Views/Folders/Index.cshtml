@@ -1,7 +1,3 @@
-@{
-    Layout = "_Layout";
-}
-
 <!-- Page Header  -->
 <div class="panel-header bg-white">
     <div class="page-inner py-5">
@@ -47,11 +43,11 @@
                         <i class="fas fa-ellipsis-h"></i>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" data-toggle="modal" data-target="#createFolderModal">
                             <i class="fas fa-pen"></i>&ensp;
                             Sửa
                         </a>
-                        <a class="dropdown-item text-danger" href="#">
+                        <a class="dropdown-item text-danger" data-toggle="modal" data-target="#removeClassModal">
                             <i class="fas fa-trash"></i>&ensp;
                             Xóa
                         </a>
@@ -185,3 +181,9 @@
         </div>
     </div>
 </div>
+
+@Html.Partial("~/Views/Shared/Modal/_addSetToFolderModal.cshtml")
+@Html.Partial("~/Views/Shared/Modal/_learnFolderModal.cshtml")
+@Html.Partial("~/Views/Shared/Modal/_shareSetModal.cshtml")
+@Html.Partial("~/Views/Shared/Modal/_createFolderModal.cshtml")
+@Html.Partial("~/Views/Shared/Modal/_removeClassModal.cshtml")

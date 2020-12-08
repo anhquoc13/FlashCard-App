@@ -227,7 +227,7 @@
 											<div class="u-text">
 												<h4>@ViewData["User.Username"]</h4>
 												<p class="text-muted">@ViewData["User.Email"]</p>
-                                                <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">
+                                                <a class="btn btn-xs btn-secondary btn-sm" asp-controller="User" asp-action="Index">
                                                     Xem hồ sơ
                                                 </a>
 											</div>
@@ -235,16 +235,7 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
-											<i class="fas fa-id-card"></i>&emsp;
-											Hồ sơ của tôi
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="fab fa-facebook-messenger"></i>&emsp;
-											Inbox
-										</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" asp-controller="User" asp-action="Edit">
 											<i class="fas fa-sliders-h"></i>&emsp;
 											Cài đặt tài khoản
 										</a>
@@ -273,7 +264,7 @@
 					<ul class="nav nav-primary">
 						<!-- Home -->
 						<li class="nav-item">
-							<a href="#">
+							<a asp-controller="Home" asp-action="Index">
 								<i class="far fa-envelope-open"></i>
 								<p>Trang chủ</p>
 							</a>
@@ -289,7 +280,7 @@
 
 						<!-- Sets -->
 						<li class="nav-item">
-							<a href="#">
+							<a asp-controller="User" asp-action="Sets">
 								<i class="far fa-clone"></i>
 								<p>Học phần</p>
 							</a>
@@ -310,8 +301,8 @@
 										</a>
 									</li>
 									<li>
-										<a href="">
-											<span class="sub-item">Thư mục nào đó</span>
+										<a asp-controller="User" asp-action="Folders">
+											<span class="sub-item">Thư mục của tôi</span>
 										</a>
 									</li>
 								</ul>
@@ -328,13 +319,13 @@
 							<div class="collapse" id="classes">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="">
+										<a asp-controller="User" asp-action="AddClass">
 											<span class="sub-item text-success">Tham gia hoặc Tạo lớp học</span>
 										</a>
 									</li>
 									<li>
-										<a href="">
-											<span class="sub-item">Lớp nào đó</span>
+										<a asp-controller="User" asp-action="Classes">
+											<span class="sub-item">Lớp của tôi</span>
 										</a>
 									</li>
 								</ul>
@@ -459,7 +450,8 @@
 	</div>
 
 	<!-- Modal -->
-	@Html.Partial("~/Views/Shared/_Modal.cshtml")
+	@Html.Partial("Modal/_createItemModal.cshtml")
+	@Html.Partial("Modal/_createFolderModal.cshtml")
 
 	<!-- jQuery -->
     <script type="text/javascript" src="~/vendors/js/jQuery/jquery-3.5.1.min.js"></script>
