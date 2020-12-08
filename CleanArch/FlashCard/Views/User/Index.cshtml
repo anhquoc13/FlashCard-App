@@ -1,14 +1,10 @@
-﻿@{
-    Layout = "_Layout";
-}
-
-<div class="page-inner">
-	<!-- Page Url  -->
+﻿<div class="page-inner">
+    <!-- Page Url  -->
     <div class="page-header">
         <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
         <ul class="breadcrumbs">
             <li class="nav-home">
-                <a href="#">
+                <a asp-controller="Home" asp-action="Index">
                     <i class="fas fa-home"></i>
                 </a>
             </li>
@@ -28,73 +24,142 @@
     </div>
 
     <!-- Page Content  -->
-	<div class="page-category">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="row align-items-center">
-                    <div class="col-md-6 col-xl-3">
-                        <!-- Avatar  -->
-                        <div class="avatar avatar-xxl profile-avt">
-                            <img src="@ViewData["User.Avatar"]" alt="user avatar" class="avatar-img rounded">
+    <div class="page-category">
+        <div class="card profile">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="@ViewData["User.Avatar"]" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Thay ảnh
+                                <input type="file" name="file"/>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-xl-5 profile-info">
-                        <!-- Name  -->
-                        <h1 class="d-inline-block font-weight-normal">@ViewData["User.Username"]</h1>
-                        <!-- Bio  -->
-                        <p>@ViewData["User.Bio"]</p>
-                        <div class="row my-4">
-                            <div class="col-sm-6">
-                                <!-- Email  -->
-                                <a href=""><h5 class="text-h-primary mb-3">@ViewData["User.Email"]</h5></a>
-                                <!-- Job  -->
-                                <h5 class="mb-3">@ViewData["User.Job"]</h5>
-                            </div>
-                            <div class="col-sm-6">
-                                <!-- Country  -->
-                                <h5 class="mb-3">@ViewData["User.Country"]</h5>
-                                <!-- Role  -->
-                                <h5 class="mb-3">@ViewData["User.Role"]</h5>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                            <h5>
+                                @ViewData["User.Username"]
+                            </h5>
+                            <h6>
+                                @Html.Raw("@")@ViewData["User.Tagname"]
+                            </h6>
+                            <p>@ViewData["User.Bio"]</p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Thông tin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lịch sử</a>
+                                </li>
+                            </ul>
                         </div>
-                        <button class="btn btn-primary"><b>Nhắn tin</b></button>&emsp;&emsp;&emsp;
-                        <button class="btn btn-default"><b>Chỉnh sửa</b></button>
                     </div>
-
-                    <!-- Team  -->
-                    <div class="col-md-12 col-xl-4">
-                        <h6 class="mb-3 text-uppercase text-body f-12">Nhóm</h6>
-                        <div class="media mb-5">
-                            <div class="avatar avatar-online">
-                                <!-- Team Avatar  -->
-                                <img src="@ViewData["Team.Avatar"]" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                            <div class="media-body ml-3 align-self-center">
-                                <!-- Team Name  -->
-                                <p class="mb-0 text-truncate">@ViewData["Team.Name"]</p>
-                            </div>
-                        </div>
-
-                        <!-- Team members  -->
-                        <h6 class="mb-3 text-uppercase text-body f-12">thành viên nhóm</h6>
-                        <div class="avatar-group">
-                            <div class="avatar">
-                                <img src="@ViewData["User.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
-                            </div>
-                            <div class="avatar">
-                                <img src="@ViewData["Team.UserID2.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
-                            </div>
-                            <div class="avatar">
-                                <img src="@ViewData["Team.UserID3.Avatar"]" alt="..." class="avatar-img rounded-circle border border-white">
-                            </div>
-                            <div class="avatar">
-                                <span class="avatar-title rounded-circle border border-white">CF</span>
-                            </div>
-                        </div>
-                        
+                    <div class="col-md-2">
+                        <a asp-controller="User" asp-action="Edit" class="profile-edit-btn btn-danger" name="btnAddMore">Chỉnh sửa</a>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>Tiến trình</p>
+                            <a asp-controller="User" asp-action="Sets" class="btn btn-secondary text-white mb-3" style="width: 100%;">
+                                <span class="btn-label">
+                                    <i class="fas fa-clone"></i>
+                                </span>&ensp;
+                                Học phần (@ViewData["User.SetCount"])
+                            </a><br>
+
+                            <a asp-controller="User" asp-action="Folders" class="btn btn-success text-white mb-3" style="width: 100%;">
+                                <span class="btn-label">
+                                    <i class="fas fa-folder"></i>
+                                </span>&ensp;
+                                Thự mục (@ViewData["User.FolderCount"])
+                            </a><br>
+
+                            <a asp-controller="User" asp-action="Classes" class="btn btn-info text-white mb-3" style="width: 100%;">
+                                <span class="btn-label">
+                                    <i class="fas fa-user"></i>
+                                </span>&ensp;
+                                Lớp học (@ViewData["User.ClassCount"])
+                            </a><br>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>ID</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>1</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@ViewData["User.Email"]</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Nghề nghiệp</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@ViewData["User.Job"]</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Quốc gia</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@ViewData["User.Country"]</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <table class="table table-bordered table-head-bg-primary">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Tìm lịch sử...">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Vào lúc</th>
+                                            <th scope="col">Nội dung kiểm tra</th>
+                                            <th scope="col">Điểm</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12:05 - 03/12/2020</td>
+                                            <td>Tiếng anh viết và đọc</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17:21 - 15/11/2020</td>
+                                            <td>Tiếng trung cơ bản</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>08:33 - 05/11/2020</td>
+                                            <td>TA chuyên nghành IT</td>
+                                            <td>8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
         </div>
-	</div>
+    </div>
 </div>

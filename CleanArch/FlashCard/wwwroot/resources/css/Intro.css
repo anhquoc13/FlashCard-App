@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 html,
 body,
 div,
@@ -107,7 +109,7 @@ hgroup {
 
 html,
 body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Baloo 2', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   font-weight: 400;
   background-color: white;
   font-size: 16px;
@@ -145,10 +147,33 @@ p {
 global styles
 --------------------------------------------- 
 */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #1572E8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0070da;
+}
+
 html,
 body {
   background: white;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Baloo 2', 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
 ::selection {
@@ -178,9 +203,9 @@ body {
   }
 }
 
-a.main-button-slider {
+button.main-button-slider {
   font-size: 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 24px 40px;
   background-color: #f55858;
   color: #fff;
@@ -189,49 +214,6 @@ a.main-button-slider {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-a.main-button-slider:hover {
-  background-color: #00e88f;
-}
-
-a.main-button {
-  font-size: 13px;
-  border-radius: 20px;
-  padding: 12px 20px;
-  background-color: #00b4c6;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.25px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a.main-button:hover {
-  background-color: #0088e8;
-}
-
-button.main-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  border-radius: 20px;
-  padding: 10px 20px;
-  background-color: #f55858;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 0.25px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-button.main-button:hover {
-  background-color: #0088e8;
 }
 
 .section-heading h2 {
@@ -255,7 +237,7 @@ header
 */
 
 .background-header {
-  background-color: #fff;
+  background-color: #1572E8;
   height: 80px !important;
   position: fixed !important;
   top: 0px;
@@ -266,7 +248,7 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #1e1e1e !important;
+  color: white !important;
 }
 
 .background-header .main-nav .nav > li:hover > a {
@@ -324,6 +306,7 @@ header
   transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
+  border-bottom: 0;
 }
 
 .header-area .main-nav .nav li {
@@ -359,17 +342,7 @@ header
   position: relative;
   padding-right: 35px;
 }
-/*
-.header-area .main-nav .nav li.submenu:after {
-  font-family: FontAwesome;
-  content: "\f107";
-  font-size: 12px;
-  color: #fff;
-  position: absolute;
-  right: 18px;
-  top: 12px;
-}
-*/
+
 .header-area.background-header .main-nav .nav li.submenu:after {
   color: #000;
 }
@@ -681,18 +654,18 @@ welcome
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-image: url(../images/banner-bg.png);
+  justify-content: center;  
+  background-color: #1572E8;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 105vh;
+  height: 110vh;
   margin-top: -10vh;
 }
 
 .welcome-area .header-text {
   position: absolute;
-  top: 55%;
+  top: 60%;
   transform: translateY(-60%);
   text-align: left;
   width: 100%;
@@ -704,20 +677,19 @@ welcome
 
 .welcome-area .header-text h1 {
   font-weight: 400;
-  font-size: 64px;
+  font-size: 51px;
   line-height: 80px;
   letter-spacing: 1.4px;
-  margin-bottom: 30px;
   color: #fff;
 }
 
 .welcome-area .header-text p {
   font-weight: 300;
-  font-size: 17px;
+  font-size: 1.7em;
   color: #fff;
   line-height: 30px;
   letter-spacing: 0.25px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -784,10 +756,52 @@ welcome
     line-height: 22px;
     margin-bottom: 40px;
   }
-  .welcome-area .header-text img {
-    width: 80%;
-    margin-top: 20px;
+}
+.font-img-1{
+  position: absolute;
+  z-index: 2;
+}
+
+.font-img-2{
+  position: absolute;
+  z-index: 3;
+}
+
+.back-img{
+  position: absolute;
+  z-index: 1;
+}
+
+.rotateAndFloatAnimate {
+  animation: rotationFloat 4s ease-in-out infinite;
+}
+
+.floatAnimate {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-40px);
   }
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes rotationFloat {
+	0% {
+    transform: translatey(0px) rotate(5deg);
+	}
+	50% {
+    transform: translatey(-40px) rotate(-20deg);
+  }
+	100% {
+    transform: translatey(0px) rotate(5deg);
+	}
 }
 
 /* 
@@ -816,9 +830,16 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
-  color: #7f88a6;
   padding: 27px 0px;
+  background-color: #1572E8;
 }
+
+.footer_bottom p{
+  margin-top: 35px;
+  font-size: 2em;
+  color: white;
+}
+
 .new_footer_top .company_widget p {
   font-size: 16px;
   font-weight: 300;
@@ -830,14 +851,15 @@ body {
   border-width: 1px;
   margin-top: 20px;
 }
+
 .btn_get_two:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #1572E8;
 }
 .btn_get:hover {
   color: #fff;
-  background: #6754e2;
-  border-color: #6754e2;
+  background: #5397f0;
+  border-color: #5397f0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -847,7 +869,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
-  color: #5e2ced;
+  color: #1572E8;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
   margin-bottom: 11px;
@@ -899,19 +921,19 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .btn_get_two {
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #1572E8;
+  border-color: #1572E8;
   color: #fff;
 }
 
 .btn_get_two:hover {
   background: transparent;
-  color: #5e2ced;
+  color: #1572E8;
 }
 
 .new_footer_top .f_social_icon a:hover {
-  background: #5e2ced;
-  border-color: #5e2ced;
+  background: #1572E8;
+  border-color: #1572E8;
 color:white;
 }
 .new_footer_top .f_social_icon a + a {
@@ -944,7 +966,7 @@ color:white;
   background: url("../images/volks.gif") no-repeat center center;
   width: 330px;
   height: 105px;
-background-size:100%;
+  background-size:100%;
   position: absolute;
   bottom: 0;
   left: 30%;
@@ -956,7 +978,7 @@ background-size:100%;
   background: url("../images/cyclist.gif") no-repeat center center;
   width: 88px;
   height: 100px;
-background-size:100%;
+  background-size:100%;
   bottom: 0;
   left: 38%;
   position: absolute;
@@ -1075,54 +1097,16 @@ preloader
   }
 }
 
+/* 
+---------------------------------------------
+extend
+--------------------------------------------- 
+*/
+
 .modal-header-primary {
     padding:9px 15px;
     border-bottom:1px solid #eee;
-    background: rgba(0, 136, 232, 1);
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(0, 136, 232, 1) 0%,
-    rgba(0, 182, 198, 1) 0%,
-    rgba(0, 136, 232, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right bottom,
-    color-stop(0%, rgba(0, 136, 232, 1)),
-    color-stop(0%, rgba(0, 182, 198, 1)),
-    color-stop(100%, rgba(0, 136, 232, 1))
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(0, 136, 232, 1) 0%,
-    rgba(0, 182, 198, 1) 0%,
-    rgba(0, 136, 232, 1) 100%
-  );
-  background: -o-linear-gradient(
-    -45deg,
-    rgba(0, 136, 232, 1) 0%,
-    rgba(0, 182, 198, 1) 0%,
-    rgba(0, 136, 232, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    -45deg,
-    rgba(0, 136, 232, 1) 0%,
-    rgba(0, 182, 198, 1) 0%,
-    rgba(0, 136, 232, 1) 100%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(0, 136, 232, 1) 0%,
-    rgba(0, 182, 198, 1) 0%,
-    rgba(0, 136, 232, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088e8', endColorstr='#0088e8', GradientType=1 );
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-     border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
+    background-color: #1572E8;
 }
 
 .modal-header {
@@ -1149,7 +1133,7 @@ preloader
   border-radius: 0;
 }
 
-._cardHoverBottomLine:hover {
+.cardHoverLine:hover {
   border-bottom: 5px solid hsl(196deg 78% 61%);
 	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.10);
 	-webkit-transition: all 0.2s ease-in;
@@ -1167,3 +1151,16 @@ preloader
 	-o-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
   }
+
+.Get_App a img:hover{
+  transform: scale(1.03);
+  -webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.modal-content {
+  border: none;
+}

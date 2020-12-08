@@ -1,104 +1,39 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Application.dll": {}
-        }
-      },
-      "Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "Application/1.0.0": {
-      "type": "project",
-      "path": "../Application/Application.csproj",
-      "msbuildProject": "../Application/Application.csproj"
-    },
-    "Domain/1.0.0": {
-      "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
-    },
-    "Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "Application >= 1.0.0",
-      "Domain >= 1.0.0",
-      "Infrastructure >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
-    "/Users/danganhquoc/.nuget/packages/": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danganhquoc/Desktop/CleanArch/FlashCard/FlashCard.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\FlashCard.csproj",
       "projectName": "FlashCard",
-      "projectPath": "/Users/danganhquoc/Desktop/CleanArch/FlashCard/FlashCard.csproj",
-      "packagesPath": "/Users/danganhquoc/.nuget/packages/",
-      "outputPath": "/Users/danganhquoc/Desktop/CleanArch/FlashCard/obj/",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\FlashCard.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\FlashCard\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/danganhquoc/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "/Users/danganhquoc/Desktop/CleanArch/Application/Application.csproj": {
-              "projectPath": "/Users/danganhquoc/Desktop/CleanArch/Application/Application.csproj"
-            },
-            "/Users/danganhquoc/Desktop/CleanArch/Domain/Domain.csproj": {
-              "projectPath": "/Users/danganhquoc/Desktop/CleanArch/Domain/Domain.csproj"
-            },
-            "/Users/danganhquoc/Desktop/CleanArch/Infrastructure/Infrastructure.csproj": {
-              "projectPath": "/Users/danganhquoc/Desktop/CleanArch/Infrastructure/Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -128,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

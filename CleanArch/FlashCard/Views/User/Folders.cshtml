@@ -1,44 +1,7 @@
-﻿@{
-    Layout = "_Layout";
-}
-
-<!-- Page Header  -->
-<div class="panel-header bg-primary-gradient">
-    <div class="page-inner py-5">
-        <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
-            <div class="form-group" style="border: 5px solid white;">
-                <button class="btn btn-default" style="border-right: 5px solid white;">
-                    <span class="btn-label">
-                        <i class="fa fa-plus"></i>
-                    </span>
-                    Thêm
-                </button>
-                <button class="btn btn-success">
-                    <span class="btn-label">
-                        <i class="fas fa-bookmark"></i>
-                    </span>
-                    Đã tạo
-                </button>
-                <button class="btn btn-secondary">
-                    <span class="btn-label">
-                        <i class="fas fa-cube"></i>
-                    </span>
-                    Đã học
-                </button>
-                <button class="btn btn-warning">
-                    <span class="btn-label">
-                        <i class="fa fa-folder"></i>
-                    </span>
-                    Thư mục
-                </button>
-                <button class="btn btn-danger">
-                    <span class="btn-label">
-                        <i class="fa fa-users"></i>
-                    </span>
-                    Lớp học
-                </button>
-            </div>
-        </div>
+﻿<!-- Page Header  -->
+<div class="panel-header bg-white">
+    <div class="page-inner">
+        @await Html.PartialAsync("~/Views/Shared/_ownerLayout.cshtml")
     </div>
 </div>
 
@@ -47,7 +10,7 @@
     <div class="page-category">
         <div class="col-md-12">
             <!-- Folder 1  -->
-            <div class="card _cardHoverBottomLine card-stats card-round">
+            <div class="card cardHoverLine card-stats card-round">
                 <div class="card-body">
                     <div class="card-category">
                         @ViewData["Folder.ID1.Count"] học phần
@@ -60,7 +23,7 @@
             </div>
 
             <!-- Folder 2  -->
-            <div class="card _cardHoverBottomLine card-stats card-round">
+            <div class="card cardHoverLine card-stats card-round">
                 <div class="card-body">
                     <div class="card-category">
                         @ViewData["Folder.ID2.Count"] học phần

@@ -8,7 +8,6 @@
     <meta name="author" content="PTTKTeam">
 
 	<!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="~/vendors/css/Plugins/all.min.css">
 
     <!-- Bootstrap -->
@@ -18,10 +17,10 @@
     <link rel="stylesheet" type="text/css" href="~/vendors/css/Plugins/normalize.min.css">
 
 	<!-- CSS Files -->
+	<link rel="stylesheet" type="text/css" href="~/resources/css/Error.css">
 	<link rel="stylesheet" type="text/css" href="~/vendors/css/atlantis.css" asp-append-version=true>
 	<link rel="stylesheet" type="text/css" href="~/resources/css/Layout.css" asp-append-version=true>
 	<link rel="stylesheet" type="text/css" href="~/resources/css/Flashcards.css" asp-append-version=true>
-    <link rel="stylesheet" type="text/css" href="~/resources/css/Error.css">
 
     <!--Icon-->
     <link rel="apple-touch-icon" sizes="57x57" href="~/resources/icon/apple-icon-57x57.png">
@@ -47,33 +46,35 @@
 		<div class="main-header">
 			<!-- Logo Header Start -->
 			<div class="logo-header" data-background-color="blue">
-				<!-- Icon and Brand -->
-				<a href="#" class="logo">
-					<img src="~/resources/icon/favicon-32x32.png" alt="navbar brand" class="navbar-brand">
-					<b class="navbar-name text-white text-uppercase" style="margin-left: 10px">
-                        flashcard
-                    </b>
-				</a>
-				<!-- Minimize Sidebar Button -->
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-                        <i class="fas fa-bars"></i>
-					</span>
-				</button>
-				<button class="topbar-toggler more">
-                    <i class="fas fa-bars"></i>
-                </button>
-				<div class="nav-toggle">
-					<button class="btn btn-toggle toggle-sidebar">
-                       <i class="fas fa-bars"></i>
+				<div class="container-fluid">
+					<!-- Icon and Brand -->
+					<a href="#" class="logo">
+						<img src="~/resources/icon/favicon-96x96.png" width="20%" height="auto" style="margin-top: -5px" alt="navbar brand" class="navbar-brand">
+						<b class="navbar-name text-white text-uppercase ml-2">	
+							flashcard
+						</b>
+					</a>
+					<!-- Minimize Sidebar Button -->
+					<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon">
+							<i class="fas fa-caret-square-right"></i>
+						</span>
 					</button>
+					<button class="topbar-toggler more">
+						<i class="fas fa-caret-square-down"></i>
+					</button>
+					<div class="nav-toggle">
+						<button class="btn btn-toggle toggle-sidebar">
+						<i class="fas fa-bars"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 			<!-- Logo Header End -->
 
 
 			<!-- Navbar Header Start -->
-			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue">
 				<div class="container-fluid">
 					<!-- Search -->
 					<div class="collapse" id="search-nav">
@@ -226,7 +227,7 @@
 											<div class="u-text">
 												<h4>@ViewData["User.Username"]</h4>
 												<p class="text-muted">@ViewData["User.Email"]</p>
-                                                <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">
+                                                <a class="btn btn-xs btn-secondary btn-sm" asp-controller="User" asp-action="Index">
                                                     Xem hồ sơ
                                                 </a>
 											</div>
@@ -234,16 +235,7 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
-											<i class="fas fa-id-card"></i>&emsp;
-											Hồ sơ của tôi
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="fab fa-facebook-messenger"></i>&emsp;
-											Inbox
-										</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" asp-controller="User" asp-action="Edit">
 											<i class="fas fa-sliders-h"></i>&emsp;
 											Cài đặt tài khoản
 										</a>
@@ -268,79 +260,28 @@
 		<div class="sidebar sidebar-style-2">			
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
-					<!-- Profile Sidebar Left -->
-					<div class="user">
-						<div class="avatar-sm float-left mr-2">
-							<img src="@ViewData["User.Avatar"]" alt="..." class="avatar-img rounded-circle">
-						</div>
-						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
-								<span>
-									@ViewData["User.Username"]
-									<span class="user-level">@ViewData["User.Role"]</span>
-									<span class="caret"></span>
-								</span>
-							</a>
-							<div class="clearfix"></div>
-
-							<div class="collapse in" id="collapseExample">
-								<ul class="nav">
-									<li>
-										<a href="#profile">
-											<span class="link-collapse">
-												<i class="fas fa-id-card">&emsp;Xem hồ sơ</i>
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#edit">
-											<span class="link-collapse">
-												<i class="fas fa-user-cog">&emsp;Chỉnh sửa hồ sơ</i>
-											</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
 					<!-- Sidebar Menu -->
 					<ul class="nav nav-primary">
-						<!-- Tools -->
-						<li class="nav-item active">
-							<a data-toggle="collapse" href="#yoursets" class="collapsed" aria-expanded="false">
-								<i class="fas fa-home"></i>
-								<p>Công cụ</p>
-								<span class="caret"></span>
+						<!-- Home -->
+						<li class="nav-item">
+							<a asp-controller="Home" asp-action="Index">
+								<i class="far fa-envelope-open"></i>
+								<p>Trang chủ</p>
 							</a>
-							<div class="collapse" id="yoursets">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="">
-											<span class="sub-item">Trang chủ</span>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="sub-item">Cài đặt</span>
-										</a>
-									</li>
-								</ul>
-							</div>
 						</li>
 
-						<!-- Sidebar Items -->
-						<li class="nav-section">
-							<span class="sidebar-mini-icon">
-								<i class="fa fa-ellipsis-h"></i>
-							</span>
-							<h4 class="text-section">Lựa chọn</h4>
-						</li>
+						<!-- Process -->
+						<li class="nav-item">
+							<a href="#" data-toggle="modal" data-target="#createItemModal">
+								<i class="far fa-edit"></i>
+								<p>Thêm mới</p>
+							</a>
+						</li><hr>
 
 						<!-- Sets -->
 						<li class="nav-item">
-							<a data-toggle="collapse" href="#">
-								<i class="fas fa-clone"></i>
+							<a asp-controller="User" asp-action="Sets">
+								<i class="far fa-clone"></i>
 								<p>Học phần</p>
 							</a>
 						</li>
@@ -348,7 +289,7 @@
 						<!-- Folders -->
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#folders">
-								<i class="fas fa-folder"></i>
+								<i class="far fa-folder"></i>
 								<p>Thư mục</p>
 								<span class="caret"></span>
 							</a>
@@ -356,12 +297,12 @@
 								<ul class="nav nav-collapse">
 									<li>
 										<a href="" data-toggle="modal" data-target="#createFolderModal">
-											<span class="sub-item">Tạo thư mục</span>
+											<span class="sub-item text-success">Tạo thư mục</span>
 										</a>
 									</li>
 									<li>
-										<a href="">
-											<span class="sub-item">Thư mục nào đó</span>
+										<a asp-controller="User" asp-action="Folders">
+											<span class="sub-item">Thư mục của tôi</span>
 										</a>
 									</li>
 								</ul>
@@ -371,20 +312,20 @@
 						<!-- Classes -->
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#classes">
-								<i class="fas fa-users"></i>
+								<i class="far fa-user"></i>
 								<p>Lớp học</p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="classes">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="">
-											<span class="sub-item">Tham gia hoặc Tạo lớp học</span>
+										<a asp-controller="User" asp-action="AddClass">
+											<span class="sub-item text-success">Tham gia hoặc Tạo lớp học</span>
 										</a>
 									</li>
 									<li>
-										<a href="">
-											<span class="sub-item">Lớp nào đó</span>
+										<a asp-controller="User" asp-action="Classes">
+											<span class="sub-item">Lớp của tôi</span>
 										</a>
 									</li>
 								</ul>
@@ -507,159 +448,26 @@
 		<!-- Color settings End -->
 
 	</div>
-	
 
-	<!-- Create Class Modal Start -->
-    <div class="modal fade" id="createClassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-				<div class="modal-header modal-header-primary">
-					<h1 class="modal-title" id="exampleModalLabel">
-                        Tạo lớp mới
-                    </h1>
-
-                    <!-- close button -->
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					    <i class="fas fa-window-close"></i>
-					</button>
-
-				</div>
-				<div class="modal-body">
-                    <!-- Input Form -->
-					<div class="form-group form-floating-label" style="margin-top: 10px;">
-						<input id="inputFloatingLabel" type="text" class="form-control input-border-bottom form-control-lg" required="">
-						<label for="inputFloatingLabel" class="placeholder">
-                            <h4><b>Tên Lớp</b></h4>
-                        </label>
-					</div>
-
-					<div class="form-group form-floating-label" style="margin-top: 40px;">
-						<input id="inputFloatingLabel" type="text" class="form-control input-border-bottom form-control-lg" required="">
-						<label for="inputFloatingLabel" class="placeholder">
-                            <h4><b>Mô tả</b></h4>
-                        </label>
-					</div>
-
-					<div class="custom-control custom-checkbox" style="padding-left: 35px; margin-top: 40px;">
-						<input type="checkbox" class="custom-control-input" id="customCheck1">
-						<label class="custom-control-label" for="customCheck1" style="font-size: 1em;">
-							<h4>Cho phép thành viên khác thêm/xóa học phần và thêm thành viên mới</h4>
-						</label>
-					</div>
-
-					<div class="form-group form-floating-label" style="margin-top: 40px;">
-						<input id="inputFloatingLabel" type="text" class="form-control input-border-bottom form-control-lg" required="">
-						<label for="inputFloatingLabel" class="placeholder">
-                            <h4><b>Tên trường</b></h4>
-                        </label>
-					</div>
-
-					<a href="" class="col" style="text-decoration: none;">
-						<div class="card _cardbtn card-stats card-round" style=" background-color: #3ccfcf; margin-top: 100px;">
-							<div class="card-body">
-								<div class="numbers">
-									<p class="card-category text-center text-white" style="font-size: 2em;">
-                                        <b>Tạo Lớp</b>
-                                    </p>
-								</div>
-							</div>
-						</div>
-					</a>
-                    
-				</div>
-            </div>
-        </div>
-    </div>
-    <!-- Create Class Modal End -->
-
-
-	<!-- Create Folder Modal Start -->
-    <div class="modal fade" id="createFolderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-				<div class="modal-header modal-header-primary">
-					<h1 class="modal-title" id="exampleModalLabel">
-                        Tạo thư mục mới
-                    </h1>
-                    <!-- close button -->
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					    <i class="fas fa-window-close"></i>
-					</button>
-
-				</div>
-				<div class="modal-body">
-                    <!-- Input Form -->
-					<div class="form-group form-floating-label" style="margin-top: 10px;">
-						<input id="inputFloatingLabel" type="text" class="form-control input-border-bottom form-control-lg" required="">
-						<label for="inputFloatingLabel" class="placeholder">
-                            <h4><b>Tiêu đề</b></h4>
-                        </label>
-					</div>
-                    
-					<div class="form-group form-floating-label" style="margin-top: 40px;">
-						<input id="inputFloatingLabel" type="text" class="form-control input-border-bottom form-control-lg" required="">
-						<label for="inputFloatingLabel" class="placeholder">
-                            <h4><b>Mô tả</b></h4>
-                        </label>
-					</div>
-
-					<a href="" class="col" style="text-decoration: none;">
-						<div class="card _cardbtn card-stats card-round" style=" background-color: #3ccfcf; margin-top: 100px;">
-							<div class="card-body">
-								<div class="numbers">
-									<p class="card-category text-center text-white" style="font-size: 2em;">
-                                        <b>Tạo thư mục</b>
-                                    </p>
-								</div>
-							</div>
-						</div>
-					</a>
-
-				</div>
-            </div>
-        </div>
-    </div>
-    <!-- Create Folder Modal End -->
-
+	<!-- Modal -->
+	@Html.Partial("Modal/_createItemModal.cshtml")
+	@Html.Partial("Modal/_createFolderModal.cshtml")
 
 	<!-- jQuery -->
-    <script src="~/vendors/js/jQuery/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="~/vendors/js/jQuery/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="~/vendors/js/jQuery/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="~/vendors/js/jQuery/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="~/vendors/js/jQuery/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	
     <!-- Bootstrap -->
-    <script src="~/vendors/js/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/vendors/js/Bootstrap/bootstrap.bundle.min.js"></script>
 
-	<!-- jQuery UI -->
-	<script src="~/vendors/js/jQuery/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="~/vendors/js/jQuery/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-
-	<!-- jQuery Scrollbar -->
-	<script src="~/vendors/js/jQuery/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-    <!-- jQuery Sparkline -->
-	<script src="~/vendors/js/jQuery/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-	<!-- Chart JS -->
-	<script src="~/vendors/js/Plugins/chart.js/chart.min.js"></script>
-
-	<!-- Chart Circle -->
-	<script src="~/vendors/js/Plugins/chart-circle/circles.min.js"></script>
-
-	<!-- Datatables -->
-	<script src="~/vendors/js/Plugins/datatables/datatables.min.js"></script>
-
-	<!-- Bootstrap Notify -->
-	<script src="~/vendors/js/Plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
-
-	<!-- Sweet Alert -->
-	<script src="~/vendors/js/Plugins/sweetalert/sweetalert.min.js"></script>
-
-	<!-- Atlantis JS -->
-	<script src="~/vendors/js/atlantis.min.js"></script>
+	<!-- Plugins -->
+	<script type="text/javascript" src="~/vendors/js/atlantis.min.js"></script>
 
 	<!-- JS Files -->
-	<script src="~/resources/js/setting-Layout.js">
-	<script src="~/resources/js/Layout.js"></script>
-	<script src="~/resources/js/Flashcards.js"></script>
-    <script src="~/resources/js/Error.js"></script>
+	<script type="text/javascript" src="~/resources/js/setting-Layout.js"></script>
+	<script type="text/javascript" src="~/resources/js/Flashcards.js" asp-append-version=true></script>
+    <script type="text/javascript" src="~/resources/js/Error.js"></script>
 </body>
 </html>

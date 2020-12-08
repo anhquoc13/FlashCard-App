@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jaZ1YZH+dKAxYm6Q5qL9B307fcYOIsIF9y68waa2JWz5o8hzaj/mZUvEdiwTMxnZVG3AvEIPKLE47MObyaTF5w==",
+  "dgSpecHash": "9f+ET337BVotneC0c0Qv9PburPf4Xy0Z1M5DRYPlsAThmh5YjraIywSAyKxWhZD8dk11zMe5H2oQet8cLTakpA==",
   "success": true,
-  "projectFilePath": "/Users/danganhquoc/Desktop/CleanArch/Domain/Domain.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\FlashCard-App\\CleanArch\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
