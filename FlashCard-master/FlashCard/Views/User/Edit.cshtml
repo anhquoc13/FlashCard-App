@@ -1,0 +1,137 @@
+<div class="page-inner">
+	<!-- Page Url  -->
+    <div class="page-header">
+        <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
+        <ul class="breadcrumbs">
+            <li class="nav-home">
+                <a asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="separator">
+                <i class="fas fa-angle-right"></i>
+            </li>
+            <li class="nav-item">
+                Trang
+            </li>
+            <li class="separator">
+                <i class="fas fa-angle-right"></i>
+            </li>
+            <li class="nav-item">
+                <a href="#">@ViewData["Page.Target"]</a> <!-- Page Target Small -->
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page Content  -->
+	<div class="page-category">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="disableinput">ID của bạn (Khóa): </label>
+                            <input type="text" class="form-control" id="disableinput" placeholder="@ViewData["User.ID"]" disabled="">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Họ tên: </label>
+                            <div class="input-icon">
+                                <span class="input-icon-addon">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="@ViewData["User.Username"]">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Tên thẻ: </label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@Html.Raw("@")</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="@ViewData["User.Tagname"]" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email2">Email: </label>
+                            <input type="email" class="form-control" id="email2" placeholder="@ViewData["User.Email"]">
+                            <small id="emailHelp2" class="form-text text-muted">
+                                Chúng tôi không bao giờ chia sẻ email của bạn cho người khác.
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label>Quyền riêng tư:</label>
+                            <select class="custom-select">
+                                <option>Mọi người</option>
+                                <option>Chỉ bạn bè</option>
+                                <option>Chỉ mình tôi</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <label>Giới tính: </label><br>
+                            <label class="radio">
+                                <input type="radio" name="optionsRadios" value="" checked>
+                                <span><h4>Nam</h4></span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="optionsRadios" value="">
+                                <span><h4>Nữ</h4></span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Quốc gia: </label>
+                            <input type="text" class="form-control" id="country" placeholder="@ViewData["User.Country"]">
+                        </div>
+                        <div class="form-group" style="width: 50%;">
+                            <label class="form-label">Phân quyền: </label>
+                            <div class="selectgroup w-100">
+                                <label class="selectgroup-item">
+                                    <input type="radio" name="value" value="25" class="selectgroup-input" checked="">
+                                    <span class="selectgroup-button">Quản trị viên</span>
+                                </label>
+                                <label class="selectgroup-item">
+                                    <input type="radio" name="value" value="50" class="selectgroup-input">
+                                    <span class="selectgroup-button">Người dùng</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-success mt-4 mb-3 ml-2">
+                            <span class="btn-label"><i class="fa fa-save"></i></span>&ensp;
+                            Cập nhật hồ sơ
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="profile-img">
+                            <img src="@ViewData["User.Avatar"]" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Thay ảnh
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control text-dark" id="Bio" rows="3" placeholder="@ViewData["User.Bio"]"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2">
+                            <button type="button" class="btn btn-info text-center" data-toggle="modal" data-target="#changePassModal">
+                                Đổi mật khẩu
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="button" class="btn btn-danger text-center" data-toggle="modal" data-target="#removeAccountModal">
+                                Xóa tài khoản
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+	</div>
+</div>
+
+@Html.Partial("~/Views/Shared/Modal/_changePassModal.cshtml")
+@Html.Partial("~/Views/Shared/Modal/_removeAccountModal.cshtml")
