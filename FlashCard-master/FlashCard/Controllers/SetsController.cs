@@ -10,6 +10,10 @@ namespace LearningWeb.Controllers
     {
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["Set.Name"]="Tiếng anh nâng cao";
             ViewData["Set.Owner.Username"]="Hải Lương";
             ViewData["Set.Owner.Avatar"]="resources/images/user/avt_2.jpg";

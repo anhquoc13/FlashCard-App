@@ -1,5 +1,4 @@
-﻿using FlashCard.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -20,6 +19,10 @@ namespace FlashCard.Controllers
 
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Vũ Đệ";
             ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
@@ -32,12 +35,6 @@ namespace FlashCard.Controllers
             ViewData["Page.Title"]="Vũ Đệ";
             ViewData["Page.Target"]="Trang Chủ";
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

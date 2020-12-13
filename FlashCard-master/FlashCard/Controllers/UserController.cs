@@ -10,6 +10,10 @@ namespace LearningWeb.Controllers
     {
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
@@ -29,6 +33,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult Edit()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.ID"]="1";
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Tagname"]="tuanvu";
@@ -46,6 +54,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult Sets()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
@@ -76,6 +88,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult Folders()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
@@ -100,6 +116,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult Classes()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Tagname"]="tuanvu";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
@@ -132,6 +152,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult AddSet()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";
@@ -143,6 +167,10 @@ namespace LearningWeb.Controllers
 
         public IActionResult AddClass()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["User.Username"]="Tuấn Vũ";
             ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["User.Email"]="abc@gmail.com";

@@ -10,6 +10,10 @@ namespace LearningWeb.Controllers
     {
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
             ViewData["Class.Name"]="Lớp 116A - Đại học Sài Gòn SGU";
             ViewData["Class.School"]="SGUL • Ho Chi Minh City, Viet Nam";
             ViewData["Class.Link"]="https://flashcard.com/join/T7cMjJefS";
