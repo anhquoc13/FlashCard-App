@@ -1,3 +1,6 @@
+@using FlashCard.Models  
+@model FlashCard.Models.User  
+
 <div class="page-inner">
 	<!-- Page Url  -->
     <div class="page-header">
@@ -30,30 +33,26 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="disableinput">ID của bạn (Khóa): </label>
-                            <input type="text" class="form-control" id="disableinput" placeholder="@ViewData["User.ID"]" disabled="">
-                        </div>
-                        <div class="form-group">
-                            <label for="username">Họ tên: </label>
+                            <label for="username">Họ tên (ID): </label>
                             <div class="input-icon">
                                 <span class="input-icon-addon">
                                     <i class="fa fa-user"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="@ViewData["User.Username"]">
+                                <input type="text" class="form-control" placeholder="@Model.ID">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="username">Tên thẻ: </label>
+                            <label for="username">Biệt danh: </label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">@Html.Raw("@")</span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="@ViewData["User.Tagname"]" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="@Model.tagname" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email2">Email: </label>
-                            <input type="email" class="form-control" id="email2" placeholder="@ViewData["User.Email"]">
+                            <input type="email" class="form-control" id="email2" placeholder="@Model.email">
                             <small id="emailHelp2" class="form-text text-muted">
                                 Chúng tôi không bao giờ chia sẻ email của bạn cho người khác.
                             </small>
@@ -66,21 +65,12 @@
                                 <option>Chỉ mình tôi</option>
                             </select>
                         </div>
-                        <div class="form-check">
-                            <label>Giới tính: </label><br>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios" value="" checked>
-                                <span><h4>Nam</h4></span>
-                            </label>
-                            <label class="radio">
-                                <input type="radio" name="optionsRadios" value="">
-                                <span><h4>Nữ</h4></span>
-                            </label>
-                        </div>
                         <div class="form-group">
                             <label for="password">Quốc gia: </label>
-                            <input type="text" class="form-control" id="country" placeholder="@ViewData["User.Country"]">
+                            <input type="text" class="form-control" id="country" placeholder="@Model.contry">
                         </div>
+                        @if(Model.role=="Quản trị viên")
+                        {
                         <div class="form-group" style="width: 50%;">
                             <label class="form-label">Phân quyền: </label>
                             <div class="selectgroup w-100">
@@ -90,10 +80,12 @@
                                 </label>
                                 <label class="selectgroup-item">
                                     <input type="radio" name="value" value="50" class="selectgroup-input">
-                                    <span class="selectgroup-button">Người dùng</span>
+                                    <span class="selectgroup-button">Thành viên</span>
                                 </label>
+                                
                             </div>
                         </div>
+                        }
                         <button class="btn btn-success mt-4 mb-3 ml-2">
                             <span class="btn-label"><i class="fa fa-save"></i></span>&ensp;
                             Cập nhật hồ sơ
@@ -106,14 +98,11 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="profile-img">
-                            <img src="@ViewData["User.Avatar"]" alt=""/>
+                            <img src="@Model.avatar" alt=""/>
                             <div class="file btn btn-lg btn-primary">
                                 Thay ảnh
                                 <input type="file" name="file"/>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control text-dark" id="Bio" rows="3" placeholder="@ViewData["User.Bio"]"></textarea>
                         </div>
                         <div class="d-flex justify-content-center mt-2">
                             <button type="button" class="btn btn-info text-center" data-toggle="modal" data-target="#changePassModal">

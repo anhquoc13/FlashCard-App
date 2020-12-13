@@ -1,15 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using FlashCard.Interfaces;
+using FlashCard.Models;
+using FlashCard.ViewModels;
 
 namespace LearningWeb.Controllers
 {
     public class FoldersController : Controller
     {
+        private readonly IUserManager _userManager;
+        public FoldersController(IUserManager userManager)
+        {
+            _userManager = userManager;
+        }
         public IActionResult Index()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
             ViewData["Folder.Name"]="Tiếng anh nâng cao";
             ViewData["Folder.Owner.Username"]="Hải Lương";
             ViewData["Folder.SetCount"]="4";
@@ -25,14 +36,10 @@ namespace LearningWeb.Controllers
             ViewData["Folder.SetID4.Count"]="72";
             ViewData["Folder.SetID5.Name"]="Thư viện học thuật";
             ViewData["Folder.SetID5.Count"]="102";
-            
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
 
             ViewData["Page.Title"]=ViewData["Folder.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View();
+            return View(user);
         }
     }
 }

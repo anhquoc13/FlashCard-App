@@ -1,55 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using FlashCard.Interfaces;
+using FlashCard.Models;
+using FlashCard.ViewModels;
 
 namespace LearningWeb.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IUserManager _userManager;
+        public UserController(IUserManager userManager)
+        {
+            _userManager = userManager;
+        }
         public IActionResult Index()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Tagname"]="tuanvu";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Country"]="Việt Nam";
-            ViewData["User.Job"]="Lập trình viên";
-            ViewData["User.Bio"]="bla bla bla ...";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
             ViewData["User.SetCount"]="117";
             ViewData["User.FolderCount"]="57";
             ViewData["User.ClassCount"]="7";
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Hồ sơ";
-            return View();
+            return View(user);
         }
 
         public IActionResult Edit()
         {
-            ViewData["User.ID"]="1";
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Tagname"]="tuanvu";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
-            ViewData["User.Role"]="Quản trị viên";
-            ViewData["User.Country"]="Việt Nam";
-            ViewData["User.Job"]="Coder";
-            ViewData["User.Bio"]="bla bla bla ...";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Hồ sơ";
-            return View();
+            return View(user);
         }
 
         public IActionResult Sets()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Tagname"]="tuanvu";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -69,17 +70,18 @@ namespace LearningWeb.Controllers
             ViewData["Set.ID5.Name"]="Thư viện học thuật";
             ViewData["Set.ID5.Count"]="102";
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Học phần";
-            return View();
+            return View(user);
         }
 
         public IActionResult Folders()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Tagname"]="tuanvu";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -93,17 +95,18 @@ namespace LearningWeb.Controllers
             ViewData["Folder.ID2.Name"]="Tiếng anh viết và đọc";
             ViewData["Folder.ID2.Count"]="11";
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Thư mục";
-            return View();
+            return View(user);
         }
 
         public IActionResult Classes()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Tagname"]="tuanvu";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -125,31 +128,35 @@ namespace LearningWeb.Controllers
             ViewData["Class.ID3.userID.Count"]="110";
             ViewData["Class.ID3.School"]="SGUL • Ho Chi Minh City, Viet Nam";
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Lớp";
-            return View();
+            return View(user);
         }
 
         public IActionResult AddSet()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Tạo học phần";
             return View();
         }
 
         public IActionResult AddClass()
         {
-            ViewData["User.Username"]="Tuấn Vũ";
-            ViewData["User.Avatar"]="../resources/images/user/avt_1.jpg";
-            ViewData["User.Email"]="abc@gmail.com";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Intro");
+            }
+            User user = _userManager.Data(User.Identity.Name);
 
-            ViewData["Page.Title"]=ViewData["User.Username"];
+            ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Tạo học phần";
-            return View();
+            return View(user);
         }
     }
 }
