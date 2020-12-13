@@ -32,5 +32,11 @@ namespace FlashCard.Services
 
             return user != null;
         }
+
+        public User Data(string id)
+        {
+            var user = _userRepository.GetBy(id);
+            return user;
+        }
     }
 }
