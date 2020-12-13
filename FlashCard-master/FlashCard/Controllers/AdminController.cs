@@ -1,30 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.ViewModels;
 
 namespace LearningWeb.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly IUserManager _userManager;
-        public AdminController(IUserManager userManager)
-        {
-            _userManager = userManager;
-        }
         public IActionResult Index()
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Intro");
-            }
-            User user = _userManager.Data(User.Identity.Name);
-            if (user.role != "Quản trị viên")
-            {
-                return RedirectToAction("Index", "Home");
-            }
+            ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
+            ViewData["User.Email"]="abc@gmail.com";
+
             ViewData["Admin.User1.ID"]="1";
             ViewData["Admin.User1.Avatar"]="resources/images/user/avt_1.jpg";
             ViewData["Admin.User1.Name"]="Tuấn Vũ";
@@ -63,7 +52,7 @@ namespace LearningWeb.Controllers
 
             ViewData["Page.Title"]="Quản lí tài khoản FlashCard";
             ViewData["Page.Target"]="Tài khoản";
-            return View(user);
+            return View();
         }
     }
 }

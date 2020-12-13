@@ -1,26 +1,15 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.ViewModels;
 
 namespace LearningWeb.Controllers
 {
     public class ClassesController : Controller
     {
-        private readonly IUserManager _userManager;
-        public ClassesController(IUserManager userManager)
-        {
-            _userManager = userManager;
-        }
         public IActionResult Index()
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Intro");
-            }
-            User user = _userManager.Data(User.Identity.Name);
             ViewData["Class.Name"]="Lớp 116A - Đại học Sài Gòn SGU";
             ViewData["Class.School"]="SGUL • Ho Chi Minh City, Viet Nam";
             ViewData["Class.Link"]="https://flashcard.com/join/T7cMjJefS";
@@ -52,10 +41,14 @@ namespace LearningWeb.Controllers
 
             ViewData["Class.FolderID1.Name"]="Tiếng anh viết và đọc";
             ViewData["Class.FolderID1.Count"]="11";
+            
+            ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
+            ViewData["User.Email"]="abc@gmail.com";
 
             ViewData["Page.Title"]=ViewData["Class.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View();
         }
     }
 }
