@@ -1,7 +1,4 @@
-﻿@using FlashCard.Models  
-@model FlashCard.Models.User  
-
-<div class="page-inner">
+﻿<div class="page-inner">
     <!-- Page Url  -->
     <div class="page-header">
         <h4 class="page-title">@ViewData["Page.Target"]</h4> <!-- Page Target Big -->
@@ -33,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="@Model.avatar" alt=""/>
+                            <img src="@ViewData["User.Avatar"]" alt=""/>
                             <div class="file btn btn-lg btn-primary">
                                 Thay ảnh
                                 <input type="file" name="file"/>
@@ -43,11 +40,12 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                             <h5>
-                                @Model.ID
+                                @ViewData["User.Username"]
                             </h5>
                             <h6>
-                                @Html.Raw("@")@Model.tagname
+                                @Html.Raw("@")@ViewData["User.Tagname"]
                             </h6>
+                            <p>@ViewData["User.Bio"]</p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Thông tin</a>
@@ -93,10 +91,26 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
+                                                <label>ID</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>1</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>@Model.email</p>
+                                                <p>@ViewData["User.Email"]</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Nghề nghiệp</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>@ViewData["User.Job"]</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -104,7 +118,7 @@
                                                 <label>Quốc gia</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>@Model.contry</p>
+                                                <p>@ViewData["User.Country"]</p>
                                             </div>
                                         </div>
                             </div>

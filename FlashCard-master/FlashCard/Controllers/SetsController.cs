@@ -1,26 +1,15 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.ViewModels;
 
 namespace LearningWeb.Controllers
 {
     public class SetsController : Controller
     {
-        private readonly IUserManager _userManager;
-        public SetsController(IUserManager userManager)
-        {
-            _userManager = userManager;
-        }
         public IActionResult Index()
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Intro");
-            }
-            User user = _userManager.Data(User.Identity.Name);
             ViewData["Set.Name"]="Tiếng anh nâng cao";
             ViewData["Set.Owner.Username"]="Hải Lương";
             ViewData["Set.Owner.Avatar"]="resources/images/user/avt_2.jpg";
@@ -35,10 +24,14 @@ namespace LearningWeb.Controllers
 
             ViewData["Folder.SetID.Name1"]="TA IT";
             ViewData["Folder.SetID.Name2"]="Tiếng anh Basic";
+            
+            ViewData["User.Username"]="Tuấn Vũ";
+            ViewData["User.Avatar"]="resources/images/user/avt_1.jpg";
+            ViewData["User.Email"]="abc@gmail.com";
 
             ViewData["Page.Title"]=ViewData["Set.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View();
         }
     }
 }
