@@ -20,7 +20,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
             ViewData["Folder.Name"]="Tiếng anh nâng cao";
             ViewData["Folder.Owner.Username"]="Hải Lương";
             ViewData["Folder.SetCount"]="4";

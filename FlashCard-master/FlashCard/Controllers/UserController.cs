@@ -20,7 +20,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["User.SetCount"]="117";
             ViewData["User.FolderCount"]="57";
@@ -37,7 +37,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Hồ sơ";
@@ -50,7 +50,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -81,7 +81,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -106,7 +106,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Owner.Username"]="Tuấn Vũ";
             ViewData["Owner.Tagname"]="tuanvu";
@@ -139,7 +139,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Tạo học phần";
@@ -152,7 +152,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
 
             ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Tạo học phần";

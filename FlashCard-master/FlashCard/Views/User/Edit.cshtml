@@ -1,5 +1,5 @@
 @using Domain.Entities  
-@model Domain.Entities.User  
+@model Application.DTO.UserDto    
 
 <div class="page-inner">
 	<!-- Page Url  -->
@@ -69,23 +69,6 @@
                             <label for="password">Quốc gia: </label>
                             <input type="text" class="form-control" id="country" placeholder="@Model.contry">
                         </div>
-                        @if(Model.role=="Quản trị viên")
-                        {
-                        <div class="form-group" style="width: 50%;">
-                            <label class="form-label">Phân quyền: </label>
-                            <div class="selectgroup w-100">
-                                <label class="selectgroup-item">
-                                    <input type="radio" name="value" value="25" class="selectgroup-input" checked="">
-                                    <span class="selectgroup-button">Quản trị viên</span>
-                                </label>
-                                <label class="selectgroup-item">
-                                    <input type="radio" name="value" value="50" class="selectgroup-input">
-                                    <span class="selectgroup-button">Thành viên</span>
-                                </label>
-                                
-                            </div>
-                        </div>
-                        }
                         <button class="btn btn-success mt-4 mb-3 ml-2">
                             <span class="btn-label"><i class="fa fa-save"></i></span>&ensp;
                             Cập nhật hồ sơ

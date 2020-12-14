@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Application.Interfaces;
-using Application.DTO;
 using Domain.Repositories;
 using Domain.Entities;
 
@@ -26,7 +25,7 @@ namespace Application.Services
         {
             var user = _userRepository.GetBy(id);
 
-            if (user != null)
+            if (user != null && user.status == 1)
             {
                 if (user.passwd == password)
                 {

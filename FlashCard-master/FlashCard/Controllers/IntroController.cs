@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
-using Domain.Entities;
+using Application.DTO;
 using Application.ViewModels;
 
 namespace FlashCard.Controllers
@@ -47,7 +47,7 @@ namespace FlashCard.Controllers
                     ModelState.AddModelError(string.Empty, "Mật khẩu không khớp");
                     return View();
                 }
-                var userToCreate = new User() { ID = model.id, tagname = model.Tagname, email = model.Email};
+                var userToCreate = new UserDto() { ID = model.id, tagname = model.Tagname, email = model.Email};
                 var user = _userManager.Create(userToCreate, model.Password);
 
                 _signInManager.SignInAsync(user, isPersistent: false);

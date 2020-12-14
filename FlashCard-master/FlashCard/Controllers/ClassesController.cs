@@ -20,7 +20,7 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
             ViewData["Class.Name"]="Lớp 116A - Đại học Sài Gòn SGU";
             ViewData["Class.School"]="SGUL • Ho Chi Minh City, Viet Nam";
             ViewData["Class.Link"]="https://flashcard.com/join/T7cMjJefS";

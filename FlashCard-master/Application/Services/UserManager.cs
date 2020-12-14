@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Application.DTO;
 using Application.Interfaces;
+using Application.Mappings;
 using Domain.Repositories;
 using Domain.Entities;
 
@@ -15,8 +16,9 @@ namespace Application.Services
             _userRepository = userRepository;
         }
 
-        public User Create(User user, string password)
+        public User Create(UserDto temp, string password)
         {
+            User user = temp.MappingUser();
             user.passwd = password;
             user.contry = "Việt Nam";
             user.avatar = "../resources/images/user/avt_hidden.jpg";
@@ -24,7 +26,7 @@ namespace Application.Services
             user.createdDay = System.DateTime.Today.ToString("dd-MM-yyyy");
             user.status = 1;
             _userRepository.Add(user);
-
+            
             return user;
         }
 
@@ -35,10 +37,20 @@ namespace Application.Services
             return user != null;
         }
 
-        public User Data(string id)
+        public UserDto Data(string id)
         {
             var user = _userRepository.GetBy(id);
-            return user;
+            return user.MappingDto();
+        }
+
+        public bool IsAdmin(string id)
+        {
+            var user = _userRepository.GetBy(id);
+            if(user.role == "Quản trị viên")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

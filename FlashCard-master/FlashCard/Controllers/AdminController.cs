@@ -20,8 +20,8 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
-            if (user.role != "Quản trị viên")
+            var user = _userManager.Data(User.Identity.Name);
+            if (!_userManager.IsAdmin(User.Identity.Name))
             {
                 return RedirectToAction("Index", "Home");
             }

@@ -25,7 +25,7 @@ namespace FlashCard.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            User user = _userManager.Data(User.Identity.Name);
+            var user = _userManager.Data(User.Identity.Name);
             ViewData["Page.Title"]=user.ID;
             ViewData["Page.Target"]="Trang chủ";
             return View(user);

@@ -7,7 +7,8 @@ namespace Application.Interfaces
     public interface IUserManager
     {
         bool UserExists(string id);
-        User Data(string id);
-        User Create(User user, string password);
+        UserDto Data(string id);
+        bool IsAdmin(string id);
+        User Create(UserDto user, string password);
     }
 }
