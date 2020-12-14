@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using System.Linq;
-using FlashCard.Models;
-using FlashCard.Models.Repositories;
+using Domain.Entities;
+using Domain.Repositories;
 
-namespace FlashCard.Data
+namespace Infrastructure.Persistence
 {
     public class UserRepository : EFRepository<User>, IUserRepository
     {

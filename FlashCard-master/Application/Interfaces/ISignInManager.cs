@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using FlashCard.Models;
+using Application.DTO;
+using Domain.Entities;
 
-namespace FlashCard.Interfaces
+namespace Application.Interfaces
 {
     public interface ISignInManager
     {

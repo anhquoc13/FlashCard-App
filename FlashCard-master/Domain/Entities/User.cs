@@ -1,9 +1,12 @@
-using System.Collections.Generic;
+using System;
+using System.ComponentModel.DataAnnotations;
+using Domain.Entities.Common;
 
-namespace FlashCard.Models
+namespace Domain.Entities
 {
-    public class User
+    public class User : EntityBase, IAggregateRoot
     {
+        [Key]
         public string ID { get; set; }
         public string tagname { get; set; }
         public string email { get; set; }

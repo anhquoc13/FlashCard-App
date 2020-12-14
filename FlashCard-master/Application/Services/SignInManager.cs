@@ -4,11 +4,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.Models.Repositories;
+using Application.Interfaces;
+using Application.DTO;
+using Domain.Repositories;
+using Domain.Entities;
 
-namespace FlashCard.Services
+namespace Application.Services
 {
     public class SignInManager : ISignInManager
     {

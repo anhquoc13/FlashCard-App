@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using FlashCard.Models;
-using FlashCard.Models.Repositories;
+using Domain.Entities.Common;
+using Domain.Repositories;
 
-namespace FlashCard.Data
+namespace Infrastructure.Persistence
 {
     public class EFRepository<T> : IRepository<T> where T : class
     {

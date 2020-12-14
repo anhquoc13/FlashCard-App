@@ -1,6 +1,9 @@
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 
-namespace FlashCard.ViewModels
+namespace Application.ViewModels
 {
     public class RegisterViewModel
     {

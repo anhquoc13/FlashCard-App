@@ -1,20 +1,14 @@
+using Application.Interfaces;
+using Application.Services;
+using Domain.Repositories;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using FlashCard.Data;
-using FlashCard.Interfaces;
-using FlashCard.Models.Repositories;
-using FlashCard.Services;
 
-namespace FlashCard
+namespace Domain.Entities
 {
     public class Startup
     {
@@ -30,30 +24,19 @@ namespace FlashCard
         {
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
+            ConfigureScoped(services);
             services.AddDbContext<FlashCardContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("Default")));
             
             services.AddAuthentication("Cookies")
                     .AddCookie();
 
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserManager, UserManager>();
-            services.AddScoped<ISignInManager, SignInManager>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -68,6 +51,13 @@ namespace FlashCard
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private void ConfigureScoped(IServiceCollection services)
+        {
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<ISignInManager, SignInManager>();
         }
     }
 }

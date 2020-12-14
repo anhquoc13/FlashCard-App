@@ -1,6 +1,7 @@
-using FlashCard.Models;
+using System.Collections.Generic;
+using Domain.Entities;
 
-namespace FlashCard.Models.Repositories
+namespace Domain.Repositories
 {
     public interface IUserRepository : IRepository<User>
     {

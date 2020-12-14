@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.ViewModels;
+using Application.Interfaces;
+using Domain.Entities;
+using Application.ViewModels;
 
 namespace LearningWeb.Controllers
 {

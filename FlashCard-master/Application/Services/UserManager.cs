@@ -1,8 +1,10 @@
-using FlashCard.Interfaces;
-using FlashCard.Models;
-using FlashCard.Models.Repositories;
+using System.Collections.Generic;
+using Application.DTO;
+using Application.Interfaces;
+using Domain.Repositories;
+using Domain.Entities;
 
-namespace FlashCard.Services
+namespace Application.Services
 {
     public class UserManager : IUserManager
     {

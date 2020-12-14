@@ -1,6 +1,8 @@
-using FlashCard.Models;
+using System.Collections.Generic;
+using Application.DTO;
+using Domain.Entities;
 
-namespace FlashCard.Interfaces
+namespace Application.Interfaces
 {
     public interface IUserManager
     {

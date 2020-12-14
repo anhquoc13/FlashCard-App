@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
+using Domain.Entities.Common;
 
-namespace FlashCard.Models.Repositories
+namespace Domain.Repositories
 {
     public interface IRepository<T>
     {
