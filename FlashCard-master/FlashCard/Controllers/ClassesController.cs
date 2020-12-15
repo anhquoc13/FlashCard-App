@@ -1,8 +1,5 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
-using Domain.Entities;
 using Application.ViewModels;
 
 namespace LearningWeb.Controllers
@@ -20,7 +17,8 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            ClassesViewModel model = new ClassesViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
             ViewData["Class.Name"]="Lớp 116A - Đại học Sài Gòn SGU";
             ViewData["Class.School"]="SGUL • Ho Chi Minh City, Viet Nam";
             ViewData["Class.Link"]="https://flashcard.com/join/T7cMjJefS";
@@ -55,7 +53,7 @@ namespace LearningWeb.Controllers
 
             ViewData["Page.Title"]=ViewData["Class.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View(model);
         }
     }
 }

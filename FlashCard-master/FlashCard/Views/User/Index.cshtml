@@ -1,5 +1,4 @@
-﻿@using Domain.Entities  
-@model Application.DTO.UserDto    
+﻿@model Application.ViewModels.UserViewModel
 
 <div class="page-inner">
     <!-- Page Url  -->
@@ -33,7 +32,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="@Model.avatar" alt=""/>
+                            <img src="@Model.user.avatar" alt=""/>
                             <div class="file btn btn-lg btn-primary">
                                 Thay ảnh
                                 <input type="file" name="file"/>
@@ -43,10 +42,10 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                             <h5>
-                                @Model.ID
+                                @Model.user.ID
                             </h5>
                             <h6>
-                                @Html.Raw("@")@Model.tagname
+                                @Html.Raw("@")@Model.user.tagname
                             </h6>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -96,7 +95,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>@Model.email</p>
+                                                <p>@Model.user.email</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -104,7 +103,7 @@
                                                 <label>Quốc gia</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>@Model.contry</p>
+                                                <p>@Model.user.contry</p>
                                             </div>
                                         </div>
                             </div>

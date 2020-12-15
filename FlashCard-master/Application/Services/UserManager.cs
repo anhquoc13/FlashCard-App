@@ -16,9 +16,10 @@ namespace Application.Services
             _userRepository = userRepository;
         }
 
-        public User Create(UserDto temp, string password)
+        public User Create(UserDto temp, string email, string password)
         {
             User user = temp.MappingUser();
+            user.email = email;
             user.passwd = password;
             user.contry = "Việt Nam";
             user.avatar = "../resources/images/user/avt_hidden.jpg";
@@ -37,20 +38,47 @@ namespace Application.Services
             return user != null;
         }
 
-        public UserDto Data(string id)
+        public UserDto GetBy(string id)
         {
-            var user = _userRepository.GetBy(id);
-            return user.MappingDto();
+            return _userRepository.GetBy(id).MappingDto();
+        }
+
+        public User GetBy(string id, string accessID)
+        {
+            if (IsAdmin(accessID))
+            {
+                return _userRepository.GetBy(id);
+            }
+            return _userRepository.GetBy(accessID);
+        }
+
+        public IEnumerable<UserDto> GetAll()
+        {
+            return _userRepository.GetAll().MappingDto();
+        }
+
+        public IEnumerable<User> GetAll(string accessID)
+        {
+            if (IsAdmin(accessID))
+            {
+                return _userRepository.GetAll();
+            }
+            return _userRepository.GetAll().MappingDto().MappingUser();
+        }
+
+        public UserDto GetOwner(string id)
+        {
+            return _userRepository.GetBy(id).MappingDto();
         }
 
         public bool IsAdmin(string id)
         {
-            var user = _userRepository.GetBy(id);
-            if(user.role == "Quản trị viên")
-            {
-                return true;
-            }
-            return false;
+            return _userRepository.GetBy(id).role == "Quản trị viên";
+        }
+
+        public bool IsActive(string id)
+        {
+            return _userRepository.GetBy(id).status == 1;
         }
     }
 }

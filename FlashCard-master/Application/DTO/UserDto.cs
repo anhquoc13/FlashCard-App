@@ -1,9 +1,9 @@
-using System;
+using Domain.Entities.Common;
 using System.ComponentModel.DataAnnotations;
 
 namespace Application.DTO
 {
-    public class UserDto
+    public class UserDto : EntityBase
     {
         [Key]
         [StringLength(30, MinimumLength = 5)]
@@ -13,8 +13,6 @@ namespace Application.DTO
         [Required]
         public string tagname { get; set; }
         [RegularExpression(@"[a-zA-Z0-9\-_]+@+[a-zA-Z]+\.+[a-z]+$")]
-        public string email { get; set; }
-        public string contry { get; set; }
         [Required]
         public string avatar { get; set; }
     }

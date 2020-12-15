@@ -12,8 +12,6 @@ namespace Application.Mappings
             {
                 ID = user.ID,
                 tagname = user.tagname,
-                email = user.email,
-                contry = user.contry,
                 avatar = user.avatar
             };
         }
@@ -24,8 +22,6 @@ namespace Application.Mappings
             {
                 ID = userDto.ID,
                 tagname = userDto.tagname,
-                email = userDto.email,
-                contry = userDto.contry,
                 avatar = userDto.avatar
             };
         }
@@ -34,8 +30,6 @@ namespace Application.Mappings
         {
             user.ID = userDto.ID;
             user.tagname = userDto.tagname;
-            user.email = userDto.email;
-            user.contry = userDto.contry;
             user.avatar = userDto.avatar;
         }
 
@@ -44,6 +38,14 @@ namespace Application.Mappings
             foreach (var user in users)
             {
                 yield return user.MappingDto();
+            }
+        }
+
+        public static IEnumerable<User> MappingUser(this IEnumerable<UserDto> usersDto)
+        {
+            foreach (var userDto in usersDto)
+            {
+                yield return userDto.MappingUser();
             }
         }
 

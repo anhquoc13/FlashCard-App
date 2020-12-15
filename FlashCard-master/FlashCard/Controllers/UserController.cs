@@ -1,8 +1,5 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
-using Domain.Entities;
 using Application.ViewModels;
 
 namespace LearningWeb.Controllers
@@ -20,41 +17,47 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
 
             ViewData["User.SetCount"]="117";
             ViewData["User.FolderCount"]="57";
             ViewData["User.ClassCount"]="7";
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Hồ sơ";
-            return View(user);
+            return View(model);
         }
 
-        public IActionResult Edit()
+        public IActionResult Edit(string id)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
-
-            ViewData["Page.Title"]=user.ID;
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
+            model.edit = _userManager.GetBy(id, User.Identity.Name); 
+            
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Hồ sơ";
-            return View(user);
+            return View(model);
         }
 
-        public IActionResult Sets()
+        public IActionResult Sets(string id)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            if(id == null || (!_userManager.IsActive(id) && !_userManager.IsAdmin(User.Identity.Name)))
+            {
+                id = User.Identity.Name;
+            }
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
+            model.owner = _userManager.GetBy(id);
 
-            ViewData["Owner.Username"]="Tuấn Vũ";
-            ViewData["Owner.Tagname"]="tuanvu";
-            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["Owner.SetCount"]="117";
             ViewData["Owner.FolderCount"]="57";
             ViewData["Owner.ClassCount"]="7";
@@ -70,22 +73,25 @@ namespace LearningWeb.Controllers
             ViewData["Set.ID5.Name"]="Thư viện học thuật";
             ViewData["Set.ID5.Count"]="102";
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View(model);
         }
 
-        public IActionResult Folders()
+        public IActionResult Folders(string id)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            if(id == null || (!_userManager.IsActive(id) && !_userManager.IsAdmin(User.Identity.Name)))
+            {
+                id = User.Identity.Name;
+            }
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
+            model.owner = _userManager.GetBy(id);
 
-            ViewData["Owner.Username"]="Tuấn Vũ";
-            ViewData["Owner.Tagname"]="tuanvu";
-            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["Owner.SetCount"]="117";
             ViewData["Owner.FolderCount"]="57";
             ViewData["Owner.ClassCount"]="7";
@@ -95,22 +101,25 @@ namespace LearningWeb.Controllers
             ViewData["Folder.ID2.Name"]="Tiếng anh viết và đọc";
             ViewData["Folder.ID2.Count"]="11";
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Thư mục";
-            return View(user);
+            return View(model);
         }
 
-        public IActionResult Classes()
+        public IActionResult Classes(string id)
         {
             if (!User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            if(id == null || (!_userManager.IsActive(id) && !_userManager.IsAdmin(User.Identity.Name)))
+            {
+                id = User.Identity.Name;
+            }
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
+            model.owner = _userManager.GetBy(id);
 
-            ViewData["Owner.Username"]="Tuấn Vũ";
-            ViewData["Owner.Tagname"]="tuanvu";
-            ViewData["Owner.Avatar"]="../resources/images/user/avt_1.jpg";
             ViewData["Owner.SetCount"]="117";
             ViewData["Owner.FolderCount"]="57";
             ViewData["Owner.ClassCount"]="7";
@@ -128,9 +137,9 @@ namespace LearningWeb.Controllers
             ViewData["Class.ID3.userID.Count"]="110";
             ViewData["Class.ID3.School"]="SGUL • Ho Chi Minh City, Viet Nam";
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Lớp";
-            return View(user);
+            return View(model);
         }
 
         public IActionResult AddSet()
@@ -139,11 +148,12 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Tạo học phần";
-            return View();
+            return View(model);
         }
 
         public IActionResult AddClass()
@@ -152,11 +162,12 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            UserViewModel model = new UserViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
 
-            ViewData["Page.Title"]=user.ID;
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Tạo học phần";
-            return View(user);
+            return View(model);
         }
     }
 }

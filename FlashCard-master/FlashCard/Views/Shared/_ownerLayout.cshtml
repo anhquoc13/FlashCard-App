@@ -1,13 +1,13 @@
 <div class="owner-container">
     <!-- Owner Avatar -->
     <div class="owner-img-container">
-        <img src="@ViewData["Owner.Avatar"]" alt="">
+        <img src="@Model.owner.avatar" alt="">
     </div>
     <div class="owner-content">
         <!-- Owner Name -->
         <div class="owner-head">
-            <h3>@ViewData["Owner.Username"]</h3>
-            <a href=""><h5>@Html.Raw("@")@ViewData["Owner.Tagname"]</h5></a>
+            <h3>@Model.owner.ID</h3>
+            <a href=""><h5>@Html.Raw("@")@Model.owner.tagname</h5></a>
         </div>
         <!-- Owner Data -->
         <div class="owner-data">

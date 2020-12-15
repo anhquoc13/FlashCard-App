@@ -1,7 +1,4 @@
-﻿@using Domain.Entities  
-@model Application.DTO.UserDto    
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -217,7 +214,7 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="@Model.avatar" alt="..." class="avatar-img rounded-circle">
+									<img src="@Model.user.avatar" alt="..." class="avatar-img rounded-circle">
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
@@ -225,11 +222,11 @@
 									<li>
 										<div class="user-box">
 											<div class="avatar-lg">
-                                                <img src="@Model.avatar" alt="image profile" class="avatar-img rounded">
+                                                <img src="@Model.user.avatar" alt="image profile" class="avatar-img rounded">
                                             </div>
 											<div class="u-text">
-												<h4>@Model.ID</h4>
-												<p class="text-muted">@Model.email</p>
+												<h4>@Model.user.ID</h4>
+												<p class="text-muted">@Model.user.email</p>
                                                 <a class="btn btn-xs btn-secondary btn-sm" asp-controller="User" asp-action="Index">
                                                     Xem hồ sơ
                                                 </a>

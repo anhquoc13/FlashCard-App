@@ -1,4 +1,4 @@
-
+@model Application.ViewModels.AdminViewModel
 
 <div class="page-inner">
     <!-- Page Url  -->
@@ -58,86 +58,41 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @{int count = 0;}
+                        @foreach (var item in Model.userList)
+                        {
+                        count++;
                         <tr>
-                            <td>@ViewData["Admin.User1.ID"]</td>
+                            <td>@count</td>
                             <td>
                                 <div class="avatar avatar-sm">
-                                    <img src="@ViewData["Admin.User1.Avatar"]" alt="..." class="avatar-img rounded-circle">
+                                    <img src="@item.avatar" alt="..." class="avatar-img rounded-circle">
                                 </div>&emsp;
-                                <a href="#">@ViewData["Admin.User1.Name"]</a>
+                                <a asp-controller="User" asp-action="Sets" asp-route-id="@item.ID">@item.ID</a>
                             </td>
-                            <td>@ViewData["Admin.User1.CreatedDay"]</td>                        
-                            <td>@ViewData["Admin.User1.Role"]</td>
-                            <td><button class="btn btn-success btn-sm btn-round" data-original-title="@ViewData["Admin.User1.DisableDay"]">@ViewData["Admin.User1.Status"]</button></td>
+                            <td>@item.createdDay</td>
+                            @if(@item.role == "Quản trị viên")
+                            {
+                                <td class="text-danger">@item.role</td>
+                            }                        
+                            else
+                            {
+                                <td>@item.role</td>
+                            }
+                            @if (@item.status == 1)
+                            {
+                                <td><button class="btn btn-success btn-sm btn-round">Hoạt động</button></td>
+                            }
+                            else
+                            {
+                                <td><button class="btn btn-danger btn-sm btn-round" data-toggle="tooltip" data-original-title="@item.disableDay">Vô hiệu hóa</button></td>
+                            }
                             <td>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
+                                <button onclick="location.href='@Url.Action("Edit", "User", new { id = @item.ID })'" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
+                                <button onclick="location.href='@Url.Action("Delete", "User", new { id = @item.ID })'" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>@ViewData["Admin.User2.ID"]</td>
-                            <td>
-                                <div class="avatar avatar-sm">
-                                    <img src="@ViewData["Admin.User2.Avatar"]" alt="..." class="avatar-img rounded-circle">
-                                </div>&emsp;
-                                <a href="#">@ViewData["Admin.User2.Name"]</a>
-                            </td>
-                            <td>@ViewData["Admin.User2.CreatedDay"]</td>                       
-                            <td>@ViewData["Admin.User2.Role"]</td>
-                            <td><button class="btn btn-success btn-sm btn-round" data-original-title="@ViewData["Admin.User2.DisableDay"]">@ViewData["Admin.User2.Status"]</button></td>
-                            <td>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>@ViewData["Admin.User3.ID"]</td>
-                            <td>
-                                <div class="avatar avatar-sm">
-                                    <img src="@ViewData["Admin.User3.Avatar"]" alt="..." class="avatar-img rounded-circle">
-                                </div>&emsp;
-                               <a href="#">@ViewData["Admin.User3.Name"]</a>
-                            </td>
-                            <td>@ViewData["Admin.User3.CreatedDay"]</td>
-                            <td>@ViewData["Admin.User3.Role"]</td>
-                            <td><button class="btn btn-success btn-sm btn-round" data-original-title="@ViewData["Admin.User3.DisableDay"]">@ViewData["Admin.User3.Status"]</button></td>                        
-                            <td>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>                       
-                        </tr>
-                        <tr>
-                            <td>@ViewData["Admin.User4.ID"]</td>
-                            <td>
-                                <div class="avatar avatar-sm">
-                                    <img src="@ViewData["Admin.User4.Avatar"]" alt="..." class="avatar-img rounded-circle">
-                                </div>&emsp;
-                                <a href="#">@ViewData["Admin.User4.Name"]</a>
-                            </td>
-                            <td>@ViewData["Admin.User4.CreatedDay"]</td>
-                            <td>@ViewData["Admin.User4.Role"]</td>
-                            <td><button class="btn btn-success btn-sm btn-round" data-original-title="@ViewData["Admin.User4.DisableDay"]">@ViewData["Admin.User4.Status"]</button></td>
-                            <td>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>@ViewData["Admin.User5.ID"]</td>
-                            <td>
-                                <div class="avatar avatar-sm">
-                                    <img src="@ViewData["Admin.User5.Avatar"]" alt="..." class="avatar-img rounded-circle">
-                                </div>&emsp;
-                                <a href="#">@ViewData["Admin.User5.Name"]</a>
-                            </td>
-                            <td>@ViewData["Admin.User5.CreatedDay"]</td>                        
-                            <td>@ViewData["Admin.User5.Role"]</td>
-                            <td><button class="btn btn-danger btn-sm btn-round" data-toggle="tooltip" data-original-title="@ViewData["Admin.User5.DisableDay"]">@ViewData["Admin.User5.Status"]</button></td>
-                            <td>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-info mr-2" title="" data-toggle="tooltip" data-original-title="Chỉnh sửa"><i class="fas fa-pen"></i></button>
-                                <button href="#" class="btn btn-icon btn-sm btn-round btn-danger" title="" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
+                        }
                     </tbody>
                 </table>
             </div>

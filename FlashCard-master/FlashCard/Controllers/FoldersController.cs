@@ -1,8 +1,5 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
-using Domain.Entities;
 using Application.ViewModels;
 
 namespace LearningWeb.Controllers
@@ -20,7 +17,8 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            FoldersViewModel model = new FoldersViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
             ViewData["Folder.Name"]="Tiếng anh nâng cao";
             ViewData["Folder.Owner.Username"]="Hải Lương";
             ViewData["Folder.SetCount"]="4";
@@ -39,7 +37,7 @@ namespace LearningWeb.Controllers
 
             ViewData["Page.Title"]=ViewData["Folder.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View(model);
         }
     }
 }

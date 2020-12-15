@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
 using Application.Interfaces;
-using Domain.Entities;
 using Application.ViewModels;
 
 namespace FlashCard.Controllers
@@ -25,10 +22,11 @@ namespace FlashCard.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
-            ViewData["Page.Title"]=user.ID;
+            HomeViewModel model = new HomeViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
+            ViewData["Page.Title"]=model.user.ID;
             ViewData["Page.Target"]="Trang chủ";
-            return View(user);
+            return View(model);
         }
     }
 }

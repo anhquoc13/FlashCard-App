@@ -47,8 +47,8 @@ namespace FlashCard.Controllers
                     ModelState.AddModelError(string.Empty, "Mật khẩu không khớp");
                     return View();
                 }
-                var userToCreate = new UserDto() { ID = model.id, tagname = model.Tagname, email = model.Email};
-                var user = _userManager.Create(userToCreate, model.Password);
+                var userToCreate = new UserDto() { ID = model.id, tagname = model.Tagname };
+                var user = _userManager.Create(userToCreate, model.Email, model.Password);
 
                 _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction("Index", "Home");

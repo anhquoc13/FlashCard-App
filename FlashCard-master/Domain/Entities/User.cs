@@ -13,6 +13,7 @@ namespace Domain.Entities
         public string contry { get; set; }
         public string avatar { get; set; }
         public string createdDay { get; set; }
+        public string disableDay { get; set; }
         public string role { get; set; }
         public int status { get; set; }
     }

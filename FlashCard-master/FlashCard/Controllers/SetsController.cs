@@ -1,8 +1,5 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Application.Interfaces;
-using Domain.Entities;
 using Application.ViewModels;
 
 namespace LearningWeb.Controllers
@@ -20,7 +17,8 @@ namespace LearningWeb.Controllers
             {
                 return RedirectToAction("Index", "Intro");
             }
-            var user = _userManager.Data(User.Identity.Name);
+            SetsViewModel model = new SetsViewModel();
+            model.user = _userManager.GetBy(User.Identity.Name, User.Identity.Name);
             ViewData["Set.Name"]="Tiếng anh nâng cao";
             ViewData["Set.Owner.Username"]="Hải Lương";
             ViewData["Set.Owner.Avatar"]="resources/images/user/avt_2.jpg";
@@ -38,7 +36,7 @@ namespace LearningWeb.Controllers
 
             ViewData["Page.Title"]=ViewData["Set.Name"];
             ViewData["Page.Target"]="Học phần";
-            return View(user);
+            return View(model);
         }
     }
 }
