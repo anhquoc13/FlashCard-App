@@ -44,5 +44,3 @@ function showActionBtn(n) {
 $(document).ready(function(){
   $('[rel="tooltip"]').tooltip({trigger: "hover"});
 });
-
-/*** Data Tables ***/

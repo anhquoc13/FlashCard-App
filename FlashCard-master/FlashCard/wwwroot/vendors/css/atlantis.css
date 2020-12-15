@@ -3629,6 +3629,10 @@ label.error {
   color: #ffffff !important;
   border: 0px !important; }
 
+.table-head-bg-primary thead th a, .table-striped-bg-primary tbody tr:nth-of-type(odd) {
+  text-decoration: none;
+  color: #ffffff !important;}
+
 /* table-responsive */
 .table-responsive {
   width: 100% !important;

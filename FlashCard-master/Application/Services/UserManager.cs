@@ -57,13 +57,18 @@ namespace Application.Services
             return _userRepository.GetAll().MappingDto();
         }
 
-        public IEnumerable<User> GetAll(string accessID)
+        public IEnumerable<User> GetAll(string accessID, string sortOrder, string userRole, string searchString, int pageIndex, int pageSize, out int count)
         {
             if (IsAdmin(accessID))
             {
-                return _userRepository.GetAll();
+                return _userRepository.Filter(sortOrder, userRole, searchString, pageIndex, pageSize, out count);
             }
-            return _userRepository.GetAll().MappingDto().MappingUser();
+            return _userRepository.Filter(sortOrder, userRole, searchString, pageIndex, pageSize, out count).MappingDto().MappingUser();
+        }
+
+        public IEnumerable<string> GetRoles()
+        {
+            return _userRepository.GetRoles();
         }
 
         public UserDto GetOwner(string id)
@@ -79,6 +84,22 @@ namespace Application.Services
         public bool IsActive(string id)
         {
             return _userRepository.GetBy(id).status == 1;
+        }
+
+        public void UpdateUser(UserDto userDto)
+        {
+            var user = _userRepository.GetBy(userDto.Id);
+
+            userDto.MappingUser(user);
+
+            _userRepository.Update(user);
+        }
+
+        public void DeleteUser(string id)
+        {
+            var user = _userRepository.GetBy(id);
+
+            _userRepository.Remove(user);
         }
     }
 }

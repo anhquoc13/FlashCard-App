@@ -5,7 +5,7 @@ using Domain.Repositories;
 
 namespace Infrastructure.Persistence
 {
-    public class EFRepository<T> : IRepository<T> where T : class
+    public class EFRepository<T> : IRepository<T> where T : class, IAggregateRoot
     {
         private readonly FlashCardContext _context;
 
