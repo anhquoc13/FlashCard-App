@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Entities;
 
 namespace Application.ViewModels
 {
@@ -19,5 +20,11 @@ namespace Application.ViewModels
         [Required(ErrorMessage = "Xác minh mật khẩu không được phép để trống")]
         [RegularExpression(@".{5,}", ErrorMessage = "Mật khẩu ít nhất 5 ký tự")]
         public string ConfirmPassword { get; set; }
+        public User data { get; set; }
+        public User user { get; set; }
+        [Required(ErrorMessage = "Phân quyền!")]
+        public string userRole { get; set; }
+        [Required(ErrorMessage = "Nhập tình trạng!")]
+        public string userStatus { get; set; }
     }
 }

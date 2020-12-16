@@ -6,7 +6,8 @@ namespace Application.Interfaces
 {
     public interface IUserManager
     {
-        User Create(UserDto user, string email, string password);
+        User Register(UserDto user, string email, string password);
+        void Create(User user);
         UserDto GetBy(string id);
         User GetBy(string id, string accessID);
         UserDto GetOwner(string id);
@@ -18,5 +19,7 @@ namespace Application.Interfaces
         bool UserExists(string id);
         bool IsAdmin(string id);
         bool IsActive(string id);
+        void ChangeRole(string id);
+        void ChangeStatus(string id);
     }
 }

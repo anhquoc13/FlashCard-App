@@ -48,7 +48,7 @@ namespace FlashCard.Controllers
                     return View();
                 }
                 var userToCreate = new UserDto() { ID = model.id, tagname = model.Tagname };
-                var user = _userManager.Create(userToCreate, model.Email, model.Password);
+                var user = _userManager.Register(userToCreate, model.Email, model.Password);
 
                 _signInManager.SignInAsync(user, isPersistent: false);
                 return RedirectToAction("Index", "Home");

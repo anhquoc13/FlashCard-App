@@ -16,19 +16,24 @@ namespace Application.Services
             _userRepository = userRepository;
         }
 
-        public User Create(UserDto temp, string email, string password)
+        public User Register(UserDto temp, string email, string password)
         {
             User user = temp.MappingUser();
             user.email = email;
             user.passwd = password;
-            user.contry = "Việt Nam";
-            user.avatar = "../resources/images/user/avt_hidden.jpg";
-            user.role = "Thành viên";
             user.createdDay = System.DateTime.Today.ToString("dd-MM-yyyy");
+            user.role = "Thành viên";
+            user.avatar = "/resources/images/user/avt_hidden.jpg";
+            user.contry = "Việt Nam";
             user.status = 1;
             _userRepository.Add(user);
             
             return user;
+        }
+
+        public void Create(User user)
+        {
+            _userRepository.Add(user);
         }
 
         public bool UserExists(string id)
@@ -100,6 +105,28 @@ namespace Application.Services
             var user = _userRepository.GetBy(id);
 
             _userRepository.Remove(user);
+        }
+
+        public void ChangeRole(string id)
+        {
+            User userToChange = _userRepository.GetBy(id);
+            if (userToChange.role == "Quản trị viên")
+            {
+                userToChange.role = "Thành viên";
+            }
+            else userToChange.role = "Quản trị viên";
+            _userRepository.Update(userToChange);
+        }
+
+        public void ChangeStatus(string id)
+        {
+            User userToChange = _userRepository.GetBy(id);
+            if (userToChange.status == 1)
+            {
+                userToChange.status = 0;
+            }
+            else userToChange.status = 1;
+            _userRepository.Update(userToChange);
         }
     }
 }

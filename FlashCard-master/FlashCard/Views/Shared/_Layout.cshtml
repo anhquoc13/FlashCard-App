@@ -448,6 +448,10 @@
 		<!-- Color settings End -->
 
 	</div>
+	
+	@section Scripts {
+    @{await Html.RenderPartialAsync("~/Views/Shared/_ValidationScriptsPartial.cshtml");}
+	}
 
 	<!-- Modal -->
 	@Html.Partial("Modal/_createItemModal.cshtml")
